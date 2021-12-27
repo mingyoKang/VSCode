@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 결합 선택자 */
+         /* 자손 선택자 */
+         /* 속한 모든 태그들에 영향을 준다. */
+        /* .class01 p{
+            background-color: azure;
+        } */
+         /* 자식 선택자 */
+         /* 오로지 자식 태그에만 영향(자손에는 영향을 주지 않는다.) */
+        .class01>p{
+            background-color: blanchedalmond;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Title</h1>
+    <p>Right below the title</p>
+
+    <div class="class01">
+        <p>First sentence of the div-tag
+        <div>
+            <p>First sentence of the first sentence of the div-tag</p>
+        </div>
+        </p>
+        <p>Second sentence of the div-tag</p>
+        <p>Third sentence of the div-tag</p>
+    </div>
+    <p>A sentence outside the div-tag</p>
+</body>
+</html>

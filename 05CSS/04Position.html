@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* body{
+            margin: 0px;
+        } */
+
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: darkkhaki;
+            border: 1px solid black;
+            color: white;
+        }
+
+        #absolutebox01{
+            position: absolute;
+            /* margin, padding을 고려하지 않고 완전히 (0,0)으로 위치를 잡는다. */
+            /* 만약 top과 left를 설정하지 않은채로 viewport에 딱 붙이고 싶다면 body의 margin을 설정하면 된다. */
+            left: 0px;
+            top: 100px;
+        }
+
+        #absolutebox02{
+            position:absolute;
+            left: 0px;
+            top: 200px;
+        }
+
+        #absolutebox03{
+            position:absolute;
+            left: 300px;
+            top: 300px;
+        }
+
+        #absolutebox04{
+            position:absolute;
+            left: 300px;
+            top: 400px;
+        }
+
+        #absolutebox05{
+            position:absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- position: absolute -->
+    <div id="absolutebox01">1</div>
+    <div id="absolutebox02">2</div>
+    <div id="absolutebox03">3</div>
+    <div id="absolutebox04">4</div>
+    <div id="absolutebox05">5</div>
+</body>
+</html>

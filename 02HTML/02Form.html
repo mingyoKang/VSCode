@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="join.jsp">
+        ID: <input type="text" name="userId"><br>
+        PW: <input type="password" name="userPW"><br>
+        EMAIL: <input type="email" name="userEmail"><br>
+        GENDER:
+        <input type="radio" name="gender" value="Male">Male&nbsp;&nbsp;
+        <input type="radio" name="gender" value="Female">Female<br>
+        HOBBY:
+        <input type="checkbox" name="hobby" value="reading">Reading&nbsp;
+        <input type="checkbox" name="hobby" value="swimming">Swimming&nbsp;
+        <input type="checkbox" name="hobby" value="drawing">Drawing&nbsp;
+        <input type="checkbox" name="hobby" value="sleeping">Sleeping&nbsp;
+        <input type="checkbox" name="hobby" value="laughing">laughing&nbsp;<br>
+        CONTENT:<br>
+        <!-- radio는 중복 불가능, checkbox는 중복 가능, textarea는 많은 내용의 글을 쓸 때-->
+        <textarea rows="10" cols="50" name="memo"></textarea><br>
+        TEL:<br>
+        <select name="tel01">
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="012">012</option>
+        </select>
+        - <input type="tel" style="width: 40px;">
+        - <input type="tel" style="width: 40px;"><br>
+
+        <input type="submit" value="SEND">
+    </form>
+</body>
+</html>

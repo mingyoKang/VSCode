@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 동위 선택자: 같은 위치 */
+        .class01{
+            border: 2px solid violet;
+            width: 300px;
+        }
+         /* 일반 동위 선택자: 같은 위치에 있는 모든 태그(-> 지정된 태그 뒤에 있는 모든 태그) */
+        /* .class01~p{
+            background-color: tomato;
+            width: 300px;
+        } */
+         /* 인접 동위 선택자: 같은 위치에 있는 바로 밑 태그 */
+         .class01+p{
+             background-color: goldenrod;
+             width: 300px;
+         }
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Title</h1>
+    <p>Right below the title</p>
+
+    <div class="class01">
+        <p>First sentence of the div-tag</p>
+        <p>Second sentence of the div-tag</p>
+        <p>Third sentence of the div-tag</p>
+    </div>
+    <p>First sentence outside the div-tag</p>
+    <p>Second sentence outside the div-tag</p>
+    <p>Third sentence outside the div-tag</p>
+</body>
+</html>

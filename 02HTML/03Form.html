@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        thead{background-color: bisque;}
+        tbody{background-color: burlywood;}
+        tfoot{background-color: floralwhite;}
+    </style>
+    <form action="/something.jsp" method="get">
+    <table border="1">
+        <thead>
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" name="userid" style="outline: none; border: 0; width: 98%;"></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="userpw" style="outline: none; border:0; width: 98%;"></td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td>
+                <input type="radio" name="gender" value="male" >Male&nbsp;&nbsp;
+                <input type="radio" name="gender" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>취미</td>
+            <td>
+                <input type="checkbox" name="hobby" value="reading">Reading&nbsp;
+                <input type="checkbox" name="hobby" value="swimming">Swimming&nbsp;
+                <input type="checkbox" name="hobby" value="Eating">Eating&nbsp;
+                <input type="checkbox" name="hobby" value="sleeping">Sleeping&nbsp;
+                <input type="checkbox" name="hobby" value="leering">Leering&nbsp;
+                <input type="checkbox" name="hobby" value="drinking">Drinking&nbsp;
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>전화번호</td>
+            <td>
+                <select name="tel01">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="012">012</option>
+                </select>
+                - <input type="tel" name="tel02" style="width: 40px;">
+                - <input type="tel" name="tel03" style="width: 40px;">
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    <input type="submit" value="SEND" style="font-size: 20px;">
+    <input type="reset" value="RESET" style="font-size: 20px;">
+    </form>
+</body>
+</html>

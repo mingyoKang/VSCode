@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #wrapper>nav>div{
+            border: 1px solid black;
+            margin: 5px;
+        }
+
+        #wrapper>nav{
+            border: 1px solid black;
+            height: 50px;
+            /* flex 배치 방법을 사용 */
+            display: flex;
+            /* flex-direction: 방향을 지정한다. (row: 행, column:열) */
+            flex-direction: row;
+            /* 메인축 방향 정렬 */
+            /* flex-start: 왼쪽(기본) */
+            /* flex-end: 오른쪽 */
+            /* center: 중앙 */
+            /* space-between: 사이 공백 */
+            /* 고정적인 크기를 넣었을 때 flex간의 사이를 벌려준다. */
+            justify-content: space-between;
+        }
+
+        .left{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .center{
+            width: 300px;
+        }
+
+        .right{
+            width: 300px;
+        }
+
+        #secondNav{
+            border: 1px solid blue;
+            margin: 10px;
+            height: 50px;
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        #secondNav> div{
+            border: 1px solid black;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <div class="left">
+                <img src="bars-solid.svg" width="35px" height="35px">
+
+            </div>
+            <div class="center">
+                <img src="digg-brands.svg" width="35px" height="40px">
+
+            </div>
+            <div class="right" style="line-height: 40px;">
+                <a href="#">Login</a>
+                <a href="#">Account</a>
+                <a href="#">Help</a>
+            </div>
+        </nav>
+    </div>
+
+    <nav id="secondNav">
+        <div class="secondL">
+
+        </div>
+        <div class="secondC">
+
+        </div>
+        <div class="secondR">
+            
+        </div>
+    </nav>
+</body>
+</html>

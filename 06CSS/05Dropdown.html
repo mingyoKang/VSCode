@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* id는 유일한 것으로 작성해야한다. */
+        #main, .sub{
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        #main>li{
+            background-color: goldenrod;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid black;
+            position: relative;
+            top: 0px;
+            left: 0px;
+
+            display: inline-block;
+        }
+
+        .sub>li{
+            background-color: gold;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        a{
+            text-decoration: none;
+            font-family: fantasy;
+            color: white;
+            display: block;
+        }
+
+        .sub{
+            display: none;
+        }
+
+        /* main에 li가 아닌 main자체에 커서를 두면 모든
+        서브메뉴가 열리게 만들 수 도 있다. */
+        /* #main:hover .sub */
+        #main>li:hover .sub{
+            display: block;
+            position: absolute;
+            left: 0px;
+        }
+
+        .sub>li:hover{
+            color: tomato;
+        }
+    </style>
+
+</head>
+<body>
+    <ul id="main">
+        <li>
+            <a href="#">Menu01</a>
+            <ul class="sub">
+                <li>subMenu01</li>
+                <li>subMenu02</li>
+                <li>subMenu03</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu02</a>
+            <ul class="sub">
+                <li>subMenu01</li>
+                <li>subMenu02</li>
+                <li>subMenu03</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu03</a>
+            <ul class="sub">
+                <li>subMenu01</li>
+                <li>subMenu02</li>
+                <li>subMenu03</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

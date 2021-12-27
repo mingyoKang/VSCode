@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* absolute의 특징 */
+        /* 만약 relatvie나 absolute가 기준점이 없다면 viewport를 기준으로 top과 left가 설정되고 */
+        /* 만약 relatvie나 absolute가 기준점이 있다면 그 기준점을 삼아 top과 left가 설정된다. */
+        /* 지금 이 경우에는 div에 계속해서 포함되어있고 검정색 테두리는 viewport를 기준으로 설정되었다. */
+        /* 하지만 그 다음 div는 검정색 테투리를 기준으로 top과 left가 설정되게된다. */
+
+        #container01{
+            width: 500px;
+            height: 500px;
+            border: 3px solid black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        #container02{
+            width: 300px;
+            height: 300px;
+            border: 3px solid tomato;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        #container03{
+            width: 100px;
+            height: 100px;
+            border: 3px solid goldenrod;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        #box01{
+            background-color: hotpink;
+        }
+        #box02{
+            background-color: purple;
+        }
+        #box03{
+            background-color: bisque;
+        }
+        #box04{
+            background-color: lightseagreen;
+        }
+        #box05{
+            background-color: lightsalmon;
+        }
+        #box06{
+            background-color: lightskyblue;
+        }
+        #box07{
+            background-color: rosybrown;
+        }
+        #box08{
+            background-color: darkkhaki;
+        }
+        #box09{
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="container01">
+        <div id="box01">Box01</div>
+        <div id="box02">Box02</div>
+        <div id="box03">Box03</div>
+        <div id="container02">
+            <div id="box04">Box04</div>
+            <div id="box05">Box05</div>
+            <div id="box06">Box06</div>
+            <div id="container03">
+                <div id="box07">Box07</div>
+                <div id="box08">Box08</div>
+                <div id="box09">Box09</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

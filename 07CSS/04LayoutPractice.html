@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            margin: 10px;
+        }
+
+        *{
+            font-family: 'Trebuchet MS';
+        }
+
+        #wrapper{
+            border: 2px solid black;
+            width: 100%;
+            margin: 0px auto;
+            padding: 2px;
+        }
+
+        header{
+            border: 2px solid red;
+            height: 100px;
+        }
+
+        header>#meta{
+            border: 2px solid black;
+            background-color: lavenderblush;
+            margin: 2px;
+        }
+
+        nav{
+            border: 2px solid gray;
+            background-color: lightgray;
+            margin: 2px;
+            height: 66px;
+            line-height: 60px;
+        }
+
+        #container{
+            border: 2px solid orange;
+            margin: 2px;
+            height: 620px;
+            overflow: auto;
+        }
+
+        .asideL{
+            border: 2px solid green;
+            background-color: lightgreen;
+            margin: 1px;
+            width: 25%;
+            height: 611px;
+            float: left;
+        }
+
+        .asideR{
+            border: 2px solid green;
+            background-color: lightgreen;
+            margin: 1px;
+            width: 25%;
+            height: 611px;
+            float: right;
+        }
+
+        article{
+            border: 2px solid black;
+            background-color: yellow;
+            width: 49%;
+            height: 80px;
+            line-height: 80px;
+            margin: 2px auto;
+        }
+
+        #content-group{
+            border: 2px solid blue;
+            background-color: lightsteelblue;
+            margin: 1px auto;
+            width: 49%;
+            height: 525px;
+            overflow: auto;
+        }
+
+        content{
+            border: 2px solid pink;
+            background-color: lavender;
+            display: inline-block;
+            margin: 10px;
+            width: 30%;
+            height: 100px;
+        }
+
+        footer{
+            border: 2px solid purple;
+            background-color: lightpink;
+            margin: 2px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="meta">Meta-Header</div>
+            <nav>Nav</nav>
+        </header>
+        <div id="container">
+            <aside class="asideL">Aside Left</aside>
+            <aside class="asideR">Aside Right</aside>
+            <article>Article</article>
+            <div id="content-group">
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+                <content>Content</content>
+            </div>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

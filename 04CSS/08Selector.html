@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 상태 의사 클래스
+         태그의 상태에 따라서 각각의 스타일을 별도로 설정할 수 있다
+         CSS에서 사용할 수 있는 상태 의사 크래스
+         : checked
+         : enabled
+         : disabled -->
+    
+    <style>
+        /* input 타입 중 라디오에 체크했을 때 인접해 있는 span 태그에 효과를 넣겠다 */
+        input[type='radio']:checked+ span{
+            color: tomato;
+        }
+
+        /* 비활성화 되었을 경우 */
+        input[type='radio']:disabled+span{
+            color: goldenrod;
+        }
+
+        /* 활성화 됬을 경우(원래 기본값) */
+        input[type='radio']:enabled+span{
+            color: green;
+        }
+        
+        /* []는 속성 넣는 칸 */
+        input[type='checkbox']:checked+span{
+            background-color: wheat;
+            text-decoration-line: underline;
+        }
+
+        body{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="lecture" value="html"><span>HTML</span><br>
+    <input type="radio" name="lecture" value="css"><span>CSS</span><br>
+    <input type="radio" name="lecture" value="javascript"><span>JAVASCRIPT</span><br>
+    <!-- 비활성화시키기 -->
+    <input type="radio" name="lecture" value="jquery" disabled><span>JQUERY</span><br>
+    <hr>
+
+    <input type="checkbox" name="hobby" value="reading"><span>Reading</span><br>
+    <input type="checkbox" name="hobby" value="swimming"><span>Swimming</span><br>
+    <input type="checkbox" name="hobby" value="climbing"><span>Climbing</span><br>
+    <input type="checkbox" name="hobby" value="sleeping"><span>Sleeping</span><br>
+    <input type="checkbox" name="hobby" value="cooking"><span>Cooking</span><br>
+    <hr>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.class02{
+            border: 2px solid tomato;
+            width: 300px;
+        }
+
+        /* .class01 p:first-child{
+            color: goldenrod;
+        }
+
+        .class01 p:last-child{
+            color: darkmagenta
+        } */
+
+        div.class03{
+            border: 2px solid green;
+        }
+
+        /* 짝수번 자식들에 색깔 변화주기(2n/even) */
+        .class01 p:nth-child(2n){
+            background-color: darkolivegreen;
+            width: 300px;
+        }
+
+        /* 홀수번 자식들에 색깔 변화주기(2n+1/2n-1/odd) */
+        .class01 p:nth-child(2n+1){
+            background-color: darkorange;
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>구조의사 선택자 확인</h1>
+    <div class="class01">
+    <!-- <span>첫번째 span 태그</span><br> -->
+    <p>First passage</p>
+    <p>Second passage</p>
+    <p>Third passage</p>
+    <p>Fourth passage</p>
+    <div class="class02">
+        <p>First passage</p>
+        <p>Second passage</p>
+        <p>Third passage</p>
+        <p>Fourth passage</p>
+        <div class="class03">
+            <p>First passage</p>
+            <p>Second passage</p>
+            <p>Third passage</p>
+            <p>Fourth passage</p>
+        </div>
+        <p>Fifth passage</p>
+        <p>Sixth passage</p>
+        <p>Seventh passage</p>
+        <p>Eighth passage</p>
+    </div>
+    <p>Fifth passage</p>
+    <p>Sixth passage</p>
+    <p>Seventh passage</p>
+    <p>Eighth passage</p>
+</div>
+</body>
+</html>

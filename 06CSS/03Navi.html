@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: Nanum Gothic;
+        }
+
+        body{
+            margin: 0px;
+        }
+        #navi{
+            border: 2px solid black;
+            background-color: #262626;
+            width: 100%;
+            height: 50px;
+            position: absolute;
+        }
+
+        #navi ul{
+            list-style: none;
+            padding:0px;
+        }
+
+        #navi li{
+            display: inline-block;
+            color: beige;
+            /* border: 2px solid red; */
+            position: relative;
+            width: 15%;
+            height: 40px;
+        }
+
+        #logo{
+            font-size: 30px;
+            font-weight: 30px;
+            position: relative; 
+            top: -10px;
+            left: 0px;
+            text-align: right;
+        }
+
+        #search{
+            position: relative; 
+            top: -25px;
+            left: 0px;
+        }
+
+        #search input{
+            width: 200px;
+            height: 25px;
+            outline: none;
+            position: relative;
+            top: 10px;
+        }
+
+        #topMenu{
+            width: 40%;
+            position: relative;
+            top: -26px;
+            left: 500px;
+            text-align: right;
+        }
+
+        #topMenu div{
+            position: relative;
+            top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navi">
+        <ul>
+            <!-- logo -->
+            <li id="logo">STYLEMAN</li>
+            <!-- search -->
+            <li id="search"><input type="search"></li>
+            <!-- 상단 메뉴 -->
+            <li id="topMenu" style="width: 30%;">
+                <div>
+                +즐겨찾기 |
+                로그인 |
+                회원가입 |
+                장바구니 |
+                주문조회 |
+                고객센터
+                </div>
+            </li>      
+        </ul>
+    </div>
+</body>
+</html>

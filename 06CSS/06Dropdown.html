@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 새로 드롭다운 만들기 -->
+    <style>
+        #main, .sub{
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        #main>li{
+            width: 150px;
+        }
+
+        #main>li>a{
+            background-color: deeppink;
+            color: white;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .sub{
+            display: none;
+        }
+
+        #main>li:hover .sub{
+            display: block;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul id="main">
+        <li>
+            <a href="#">Menu01</a>
+            <ul class="sub">
+                <li>subMenu01</li>
+                <li>subMenu02</li>
+                <li>subMenu03</li>
+                <li>subMenu04</li>
+                <li>subMenu05</li>
+                <li>subMenu06</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu02</a>
+            <ul class="sub">
+                <li>subMenu01</li>
+                <li>subMenu02</li>
+                <li>subMenu03</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu03</a>
+            <ul class="sub">
+                <li>subMenu01</li>
+                <li>subMenu02</li>
+                <li>subMenu03</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu04</a>
+            <ul class="sub">
+                <li>subMenu01</li>
+                <li>subMenu02</li>
+                <li>subMenu03</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

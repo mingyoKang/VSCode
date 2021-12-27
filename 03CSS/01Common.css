@@ -1,0 +1,6 @@
+/* 스타일 태그가 이미 선언되었으므로 <style></style> 태그를 선언하지 않아도 된다. */
+h2{
+    color: chocolate;
+    background-color: cornsilk;
+    text-align: center;
+}

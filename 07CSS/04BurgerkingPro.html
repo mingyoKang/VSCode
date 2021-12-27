@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        
+        #wrapper{
+            border: 2px solid black;
+            width: 100%;
+        }
+
+        header{
+            border: 2px solid tomato;
+            background-color: #fff;
+            margin: 2px;
+            width: 98%;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        header> div{
+            border: 2px solid blue;
+            margin: 1px;
+            display: inline-block;
+            position: relative;
+            top: 5px;
+        }
+
+        nav{
+            border: 2px solid pink;
+            margin: 1px;
+            width: 60%;
+            display: inline-block;
+        }
+
+        .burgerking-image{
+            width: 100px;
+            height: 100px;
+        }
+
+        #top-menu, .sub-menu{
+            list-style: none;
+            padding: 0px;
+        }
+
+        #top-menu{
+            border: 2px solid black;
+            width: 75%;
+            position: relative;
+            top: 26px;
+        }
+
+        #top-menu>li{
+            display: inline-block;
+            border: 2px solid salmon;
+            margin: 0px 45px;
+            font-weight: bolder;
+            font-size: 20px;
+            height: 25px;
+        }
+
+        .sub-menu{
+            border: 2px solid green;
+            margin-top: 40px;
+            display: none;
+            z-index: 100;
+        }
+
+        .sub-menu>li{
+            text-align: left;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        #top-menu:hover .sub-menu{
+            display: block;
+            position: absolute;
+        }
+
+        #top-menu:hover .sub-back{
+            display: inline-block;
+        }
+
+
+        button{
+            border: 2px solid orange;
+            display: inline-block;
+            position: relative;
+            left: 450px;
+            top: -24px;
+            background-color: tomato;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        .sub-back{
+            border: 2px solid purple;
+            margin: 2px;
+            height: 260px;
+            background-color: whitesmoke;
+            z-index: 80;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        iframe{
+            width: 98%;
+            height: 98%;
+            border: 2px solid yellowgreen;
+            display: block;
+            margin: 0px auto;
+        }
+
+
+        #youtubeCon{
+            border: 2px solid teal;
+            margin: 2px auto;
+            width: 80%;
+            height: 800px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div><a href="#"><img class="burgerking-image" src="images/7371885_burger king_new burger king logo_2021_icon.png"></a></div>
+            <nav>
+                <ul id="top-menu">
+                    <li>메뉴소개
+                        <ul class="sub-menu">
+                            <li>스페셜&할인팩</li>
+                            <li>프리미엄</li>
+                            <li>와퍼</li>
+                            <li>주니어&버거</li>
+                            <li>올데킹&치킨버거</li>
+                            <li>사이드</li>
+                            <li>음료&디저트</li>
+                            <li>독퍼</li>
+                        </ul>
+                    </li>
+                    <li>매장소개
+                        <ul class="sub-menu">
+                            <li>매장찾기</li>
+                        </ul>
+                    </li>
+                    <li>이벤트
+                        <ul class="sub-menu">
+                        <li>이벤트</li>                            
+                        </ul>
+                    </li>
+                    <li>브랜드스토리
+                        <ul class="sub-menu">
+                        <li>버거킹 스토리</li>
+                        <li>WHY 버거킹</li>
+                        <li>버거킹 NEWS</li>                            
+                        </ul>
+                    </li>
+                </ul>
+                <button>딜리버리 주문</button>
+            </nav>
+        </header>
+        <div class="sub-back"></div>
+        <div id="youtubeCon">
+                <iframe src="https://www.youtube.com/embed/Zt5Q_Wqe5WU?autoplay=1&mute=1" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

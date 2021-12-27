@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        nav ul{
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        nav li{
+            border: 2px solid black;
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: darkslateblue;
+            font-weight: bold;
+        }
+
+        nav a:hover{
+            color: deeppink;
+        }
+
+        #topMenu{
+            position: relative;
+            left: 200px;
+            text-align: left;
+        }
+
+        #topMenu a{
+            position: relative;
+            left: 70px;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- <nav> 혹은 <article>을 사용할 수도 있음 -->
+        <nav>
+            <ul>
+                <li>Logo</li>
+                <li><a href="#">Board</a></li>
+                <li><a href="#">Education Management</a></li>
+                <li style="width: 500px;"><a href="#">Human Resources</a></li>
+                <li id="topMenu" style="width: 500px; height: 50px;">
+                    <a href="#">Smart Learning App |</a>
+                    <a href="#">Assessment |</a>
+                    <a href="#">Advertisement</a>
+                </li>
+            </ul>
+        </nav>
+        <hr style="position: relative; top: -20px; background-color: deeppink; height: 3px;">
+    </div>
+</body>
+</html>

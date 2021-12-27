@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #mainMenu{
+            list-style: none;
+            padding-left: 0px;
+            /* 메뉴를 가운데 두고 싶다면 */
+            /* 창의 크기에 상관없이 가운데 배치하게 된다. */
+            /* border: 1px solid green;
+            margin: 0px auto;
+            width: 99%;
+            text-align: center; */
+        }
+
+        #mainMenu>li{
+            /* 인라인으로만 하면 width와 height를 정할 수 없다
+            그렇기 때문에 inline-block으로 설정! */
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: tomato;
+
+            /* mainMenu의 리스트가 움직이지 않도록 포지션을 정해준다. */
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        #mainMenu>li>a{
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            font-family: Verdana;
+            display: block;
+        }
+
+        .subMenu{
+            list-style: none;
+            padding-left: 0px;
+            /* 서브메뉴의 디스플레이를 none으로 하면 화면에서 보이지 않게된다. */
+            display: none;
+        }
+
+        .subMenu li{
+            background-color: beige;
+            width: 200px;
+            height: 50px;
+        }
+
+        .subMenu a{
+            display: block;
+            font-size: 18px;
+            font-family: cursive;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: tomato;
+        }
+
+        /* 메인메뉴의 리스트에 커서를 갔다대면 서브메뉴를 어떻게 할지 설정 */
+        #mainMenu>li:hover .subMenu{
+            display: block;
+            position: absolute;
+            left: 0px;
+        }
+
+        .subMenu>li>a:hover{
+            color: black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <ul id="mainMenu">
+        <li>
+            <a href="#">Menu01</a>
+            <ul class="subMenu">
+                <li><a href="#">SubMenu01</a></li>
+                <li><a href="#">SubMenu02</a></li>
+                <li><a href="#">SubMenu03</a></li>
+                <li><a href="#">SubMenu04</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu02</a>
+            <ul class="subMenu">
+                <li><a href="#">SubMenu01</a></li>
+                <li><a href="#">SubMenu02</a></li>
+                <li><a href="#">SubMenu03</a></li>
+                <li><a href="#">SubMenu04</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu03</a>
+            <ul class="subMenu">
+                <li><a href="#">SubMenu01</a></li>
+                <li><a href="#">SubMenu02</a></li>
+                <li><a href="#">SubMenu03</a></li>
+                <li><a href="#">SubMenu04</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu04</a>
+            <ul class="subMenu">
+                <li><a href="#">SubMenu01</a></li>
+                <li><a href="#">SubMenu02</a></li>
+                <li><a href="#">SubMenu03</a></li>
+                <li><a href="#">SubMenu04</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

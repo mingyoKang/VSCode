@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+            padding-left: 0px;
+            /* 메뉴를 가운데 두고 싶다면 */
+            /* 창의 크기에 상관없이 가운데 배치하게 된다. */
+            /* border: 1px solid green;
+            margin: 0px auto;
+            width: 99%;
+            text-align: center; */
+        }
+
+        li{
+            border: 1px solid black;
+            /* 인라인으로만 하면 width와 height를 정할 수 없다
+            그렇기 때문에 inline-block으로 설정! */
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: tomato;
+        }
+
+        a{
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            font-family: Verdana;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Menu01</a></li>
+        <li><a href="#">Menu02</a></li>
+        <li><a href="#">Menu03</a></li>
+        <li><a href="#">Menu04</a></li>
+    </ul>
+</body>
+</html>

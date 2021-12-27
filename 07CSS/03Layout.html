@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        #wrapper{
+            border: 1px solid gray;
+            width: 98%;
+            margin: 0px auto;
+            padding: 2px;
+        }
+
+        header{
+            border: 1px solid red;
+            height: 50px;
+        }
+
+        header>#topMenu{
+            text-align: right;
+            margin-right: 5px;
+            background-color: salmon;
+        }
+
+        nav{
+            background-color: seagreen;
+            margin-top: 2px;
+        }
+
+        nav>ul{
+            list-style: none;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        nav li{
+            display: inline-block;
+            margin: 0px 20px;
+        }
+
+        #container{
+            border: 1px solid blue;
+            margin-top: 2px;
+            height: 1004px;
+            /* 범위를 넘어가는 요소들이 생기면 스크롤 바가 생기도록 설정 */
+            overflow: auto;
+        }
+
+        aside{
+            width: 30%;
+            height: 1000px;
+            border: 1px solid green;
+            margin: 2px;
+            float: left;
+        }
+
+        article{
+            border: 1px solid gold;
+            width: 69%;
+            margin: 2px;
+            float: left;
+        }
+
+        #contentGroup{
+            width: 69%;
+            border: 1px solid limegreen;
+            margin: 2px;
+            float: left;
+            padding: 2px auto;
+        }
+
+        content{
+            border: 1px solid deeppink;
+            width: 30%;
+            height: 200px;
+            margin: 10px;
+            float: left;
+        }
+
+        footer{
+            height: 300px;
+            border: 1px solid cornflowerblue;
+            margin: 2px;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+         header : 상단 (must-have)
+         nav : 메인메뉴(-> Global Navigator Bar a.k.a. GNB)
+         section: 본문 구분
+         aside: 사이드에 위치하는 공간
+         article : 본문(대)
+         content : 본문(중-소)
+         footer : 바닥글 (must-have)
+        -->
+
+    <!-- 화면 설계 문제: Layout -->
+
+    <div id="wrapper">
+
+        <header>
+            <div id="topMenu">
+                <a href="#">Login</a>
+                <a href="#">Account</a>
+                <a href="#">Help</a>
+            </div>
+            <nav>
+                <ul>
+                    <li>Menu01</li>
+                    <li>Menu02</li>
+                    <li>Menu03</li>
+                    <li>Menu04</li>
+                </ul>
+            </nav>
+        </header>
+        <div id="container">
+            <aside>사이드 메뉴</aside>
+            <article>글자가 많이 들어가는 부분</article>
+            <div id="contentGroup">
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            <content>이미지나, 기타 표시할 내용</content>
+            </div>
+        </div>
+        <footer>바닥글</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            /* 인라인형일 때 좌우 마진만 적용된다. */
+            margin: 10px;
+            background-color: darksalmon;
+            font-size: 30px;
+            /* 한 라인 안에서 블락처럼 작동할 수 있게 해주게 끔 설정 */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* p:hover{
+            display: block;
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- 블럭형 -->
+    <!-- 배경색을 지정해 라인을 통째로 칠하면 블럭형이다. -->
+    <h1 style="background-color: darksalmon; width: 300px; padding-left: 20px;">Title</h1>
+
+    <!-- 인라인형 -->
+    <!-- style에 width와 height는 작동하지 않는다. -->
+    <!-- display:block으로 바꾸면 블럭형으로 작동한다.(width, height, margin등을 설정할 수 있게된다.) -->
+    <span style="background-color: darkseagreen;">라인형태그!</span>
+    <span style="background-color: deepskyblue;">라인형태그!</span>
+    <span style="background-color: goldenrod;">라인형태그!</span>
+    <hr>
+    <span style="background-color: honeydew; display: block; width: 100px; height: 100px;">라인형 태그!</span>
+    <span>라인형 태그!</span>
+    <hr>
+
+    <!-- 블럭형을 라인형으로 바꾸자! -->
+    <!-- <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+    <hr> -->
+
+    <!-- 한 라인 안에 같이 있는데 width와 height를 바꾸고 싶다면 -->
+    <!-- display:inline-block -->
+
+    <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+
+    
+    
+
+
+</body>
+</html>

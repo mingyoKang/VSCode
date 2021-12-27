@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wrapper{
+            border: 2px solid black;
+        }
+
+        nav{
+            border: 2px solid green;
+            margin: 5px;
+            height: 120px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        div{
+            margin: 1px;
+        }
+
+        .menu{
+            width: 100px;
+        }
+
+        .search{
+            width: 200px;
+        }
+
+        .logo{
+            width: 200px;
+            margin: 0px auto;
+        }
+
+        .login{
+            width: 250px;
+            text-align: center;
+        }
+
+        .login a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #header-meta{
+            border: 2px solid goldenrod;
+            margin: 5px;
+            height: 30px;
+            text-align: right;
+        }
+
+        #header-meta>ul{
+            display: inline-block;
+            list-style: none;
+            padding: 0px;
+
+            position: relative;
+            top: -13px;
+        }
+
+        #header-meta>ul>li{
+            display: inline-block;
+            margin: 0px 5px;
+        }
+
+        #header-meta>ul a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu img{
+            vertical-align: -8px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-meta">
+            <ul>
+                <li><a href="#">대한민국</a>&nbsp; |</li>
+                <li><a href="#">매장찾기</a>&nbsp; |</li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="menu">
+                <label><a href="#" style="text-decoration: none; color: black;"><img src="bars-solid.svg" width="35px" height="35px"><span style="vertical-align: 4px; margin-left: 5px;">메뉴</span></a></label>
+            </div>
+            <div class="search">
+                <label>
+                <img src="magnifier.svg" width="20px" height="20px" style="vertical-align: -5px;">
+                <input type="search" placeholder="검색" style="width: 150px; height: 40px; outline: none;">
+                </label>
+            </div>
+            <div class="logo">
+                <img src="hermes.svg" width="200px" height="100px">
+            </div>
+            <div class="login">
+                <label><a href="#"><img src="human.svg" width="20px" height="20px" style="vertical-align: -5px;"> Login</a></label>&nbsp;
+                <label><a href="#"><img src="handbag.svg" width="20px" height="20px" style="vertical-align: -5px;"> Shopping List</a></label>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

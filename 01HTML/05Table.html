@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table 만들기, tr: table row, th:table head, td: table description-->
+<hr>
+<h1>Standard Table</h1><br>
+<hr>
+<table border=1 width=500px height=500px>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<table border="1" width=500px height=500px bgcolor=skyblue>
+    <tr height=200px> 
+        <td width=200px>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td width=200px>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table>
+<br>
+<br>
+
+
+<table border="1" width=500px height=500px bgcolor=pink>
+    <caption>
+        테이블 제목입니다
+    </caption>
+    <tr> 
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<table border="1" width=600px height=400px bgcolor=beige>
+    <tr height=80px>
+        <td><h3>Time</h3></td>
+        <td>Monday</td>
+        <td>Tuesday</td>
+        <td>Wednesday</td>
+        <td>Thursday</td>
+    </tr>
+    <tr>
+        <td>Class01</td>
+        <td>Korean</td>
+        <td>History</td>
+        <td>Society</td>
+        <td>English</td>
+    </tr>
+    <tr>
+        <td>Class02</td>
+        <td>English</td>
+        <td>Art</td>
+        <td>Korean</td>
+        <td>Math</td>
+    </tr>
+    <tr>
+        <td>Class03</td>
+        <td>Math</td>
+        <td>Korean</td>
+        <td>Math</td>
+        <td>Science</td>
+    </tr>
+    <tr>
+        <td>class04</td>
+        <td>Science</td>
+        <td>Gym</td>
+        <td>Art</td>
+        <td>Society</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<hr>
+<h1>Colspan</h1><br>
+<hr>
+
+<table border="1" width=500px height=500px bgcolor=orange>
+    <tr>
+        <td colspan="3">1</td>
+        <!-- <td>2</td> -->
+        <!-- <td>3</td> -->
+    </tr>
+    <tr>
+        <td>4</td>
+        <td colspan="2">5</td>
+        <!-- <td>6</td> -->
+    </tr>
+    <tr>
+        <td colspan="2">7</td>
+        <!-- <td>8</td> -->
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<table border="1" width=500px height=100px bgcolor=green>
+    <tr>
+        <td width=50px>Name</td>
+        <td width=50px></td>
+        <td width=50px>PhoneNumber</td>
+        <td width=50px></td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td>Introduction</td>
+        <td colspan="3"></td>
+    </tr>
+</table>
+<br>
+<br>
+
+<hr>
+<h1>Rowspan</h1><br>
+<hr>
+
+<table border="1" width=500px height=500px bgcolor=teal>
+    <tr>
+        <td rowspan="2">1</td>
+        <td rowspan="3">2</td>
+        <td>3</td>
+        <td rowspan="4">4</td>
+    </tr>
+    <tr>
+        <!-- <td>5</td> -->
+        <!-- <td>6</td> -->
+        <td>7</td>
+        <!-- <td>8</td> -->
+    </tr>
+    <tr>
+        <td>9</td>
+        <!-- <td>10</td> -->
+        <td>11</td>
+        <!-- <td>12</td> -->
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <!-- <td>16</td> -->
+    </tr>
+</table>
+<br>
+<br>
+
+<table border="1" width=600px height=300px bgcolor=lightgray>
+    <tr>
+        <td rowspan="3">JSP01 Curriculum</td>
+        <td>1. HTML/CSS/JAVAScript</td>
+        <td rowspan="6" width=50px>reference</td>
+    </tr>
+    <tr>
+        <!-- <td></td> -->
+        <td>2. JSP Basic Grammar</td>
+        <!-- <td></td> -->
+        
+    </tr>
+    <tr>
+        <!-- <td></td> -->
+        <td>3. Pointer and Tag</td>
+        <!-- <td></td> -->
+    </tr>
+    <tr>
+        <td rowspan="3">JSP02 Curriculum</td>
+        <td>4. Uploading File Cite</td>
+        <!-- <td></td> -->
+    </tr>
+    <tr>
+        <!-- <td></td> -->
+        <td>5. Make an account Cite</td>
+        <!-- <td></td> -->
+    </tr>
+    <tr>
+        <!-- <td></td> -->
+        <td>6. Blackboard Cite</td>
+        <!-- <td></td> -->
+    </tr>
+</table>
+<br>
+<br>
+
+<table border="1" width=500px height=200px bgcolor=yellow>
+    <tr>
+        <td><h1>Time</h1></td>
+        <td>Monday</td>
+        <td>Tuesday</td>
+        <td>Wednesday</td>
+        <td>Thursday</td>
+    </tr>
+    <tr>
+        <td>Class01</td>
+        <td colspan="4">Web Utilizing</td>
+        <!-- <td></td> -->
+        <!-- <td></td> -->
+        <!-- <td></td> -->
+    </tr>
+    <tr>
+        <td>Class02</td>
+        <td colspan="2">Web Programming</td>
+        <td></td>
+        <td colspan="2">Web Utilizing</td>
+        <!-- <td></td> -->
+    </tr>
+    <tr>
+        <td>Class03</td>
+        <td colspan="3">Web Programming</td>
+        <!-- <td></td>
+        <td></td> -->
+        <td>Web Utilizing</td>
+    </tr>
+    <tr>
+        <td>Class04</td>
+        <td></td>
+        <td colspan="3">JAVAScript</td>
+        <!-- <td></td> -->
+        <!-- <td></td> -->
+    </tr>
+    <tr>
+        <td>Class05</td>
+        <td colspan="4">Nothing</td>
+        <!-- <td></td>
+        <td></td>
+        <td></td> -->
+    </tr>
+</table>
+<br>
+<br>
+
+<hr>
+<h1>Table Structure</h1><br>
+<hr>
+
+<table border=1 with=500px height=500px>
+    <caption>
+        Student Score
+    </caption>
+    <thead>
+    <tr>
+        <td>Part</td>
+        <td>Student01</td>
+        <td>Student02</td>
+        <td>Student03</td>
+        <td>Student04</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Midterm</td>
+        <td>88</td>
+        <td>95</td>
+        <td>69</td>
+        <td>79</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>80</td>
+        <td>90</td>
+        <td>80</td>
+        <td>75</td>
+    </tr>
+    <tr>
+        <td>Project</td>
+        <td>100</td>
+        <td>88</td>
+        <td>96</td>
+        <td>85</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>Sum</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+    </tr>
+    <tr>
+        <td>Average Score</td>
+        <td>90</td>
+        <td>90</td>
+        <td>90</td>
+        <td>90</td>
+    </tr>
+    </tfoot>
+</table>
+
+    
+</body>
+</html>

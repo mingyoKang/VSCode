@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--기본-->
+    <table border=3 width=200px height=400px style="color: blue;" bgcolor=lightblue>
+        <tr height=50px>
+            <th width=80px>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <tr height=200px>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr height=300px>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 행병합-->
+    <table border=1 width=200px height=400px>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td rowspan="3">4</td>
+        </tr>
+        <tr>
+            <!--<td>5</td>-->
+            <td>6</td>
+            <td>7</td>
+            <!--<td>8</td>-->
+        </tr>
+        <tr>
+            <td>9</td>
+            <!--<td>10</td>-->
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 열병합 colspan-->
+    <table border=1 width=200px height=400px>
+        <tr>
+            <td>1</td>
+            <td colspan="2">2</td>
+            <!--<td>3</td>-->
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

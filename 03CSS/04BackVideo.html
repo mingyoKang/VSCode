@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #back_frame01{
+            width: 100%;
+            height: 700px;
+            /* opacity: 0.5; */
+            /* opacity는 1이 가장 큰 수 */
+            /* position: absolute; */
+            /* left: 0px;
+            top: 0px; */
+        }
+
+        #back_frame02{
+            width: 100%;
+            height: 700px;
+            opacity: 1;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- embedded youtube video를 autoplay하고 싶으면 src에 ?autoplay=1&mute=1추가하기! -->
+    <iframe id="back_frame01" src="https://www.youtube.com/embed/iuOYz8zt9J4?autoplay=1&mute=1" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2>Title</h2>
+    <h3>Sub Title</h3>
+    <p>Contents</p>
+    <hr>
+
+    <iframe id="back_frame02" width="560" height="315" src="https://www.youtube.com/embed/7bRWMpGlP7c?autoplay=1&mute=1" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

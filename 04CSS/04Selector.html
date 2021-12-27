@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border: 1px solid gray;
+        }
+
+        td{
+            border: 1px solid tomato;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table class="mainTable">
+        <tr>
+            <td rowspan="3">Day</td>
+            <td colspan="5">Seminar</td>
+            <!-- <td></td>
+            <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td colspan="2">Schedule</td>
+            <!-- <td></td> -->
+            <td colspan="3" rowspan="2">Topic</td>
+            <!-- <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td>Begin</td>
+            <td>End</td>
+            <!-- <td></td> -->
+            <!-- <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2">8:00 a.m.</td>
+            <td rowspan="2">5:00 p.m.</td>
+            <td colspan="3">Introduction to XML</td>
+            <!-- <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <td colspan="3">Validity:DTD and Relax NG</td>
+            <!-- <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td>8:00 a.m.</td>
+            <td>11:00 a.m.</td>
+            <td class="change" colspan="3">XPath</td>
+            <!-- <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td>11:00 a.m.</td>
+            <td>2:00 p.m.</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td>2:00 p.m.</td>
+            <td>5:00 p.m.</td>
+            <td class="change" colspan="3">XSL Transformations</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>8:00 a.m.</td>
+            <td>12:00 p.m.</td>
+            <td colspan="3">XML Formatting Objects</td>
+            <!-- <td></td>
+            <td></td> -->
+        </tr>
+    </table>
+</body>
+</html>

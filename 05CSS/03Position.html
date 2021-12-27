@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #staticbox{
+            position: static;
+            width: 100px;
+            height: 50px;
+            background-color: rebeccapurple;
+            color: white;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        /* relative는 본래 static이었을 때를 기준으로 잡는다. */
+        #relativebox01{
+            position: relative;
+            top: 0px;
+            left: 100px;
+            width: 100px;
+            height: 50px;
+            background-color: beige;
+            /* 앞으로 튀어나오게하기 */
+            z-index: 1;
+        }
+
+        #relativebox02{
+            position: relative;
+            top: -50px;
+            left: 150px;
+            background-color: burlywood;
+            width: 100px;
+            height: 50px;
+        }
+
+        #relativebox03{
+            position: relative;
+            width: 100px;
+            height: 50px;
+            background-color: cadetblue;
+            top: 100px;
+            left: 40px;
+        }
+
+        #relativebox04{
+            position: relative;
+            width: 100px;
+            height: 50px;
+            background-color: cornflowerblue;
+            top: 200px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Position: 박스의 위치를 지정 -->
+     <!-- static(기본): viewport의 순서대로 박스를 연결(위에서 아래로 쌓인다.)
+          relative: 특정 html 요소를 기본위치로 잡고 그 위치를 기준(이미 기준점에서 떨어진 박스에서 시작)으로 현재 박스의 위치를 지정한다. (상대위치)
+          absolute: 특정 html 요소를 기본위치로 잡고 그 위치를 기준(기준점에 있는 박스 자리에서 시작-별다른 설정을 하지 않으면 덮어버린다.)으로 현재 박스의 위치를 지정한다. (절대위치)
+          fixed e.g.네비게이션 바가 스크롤을 내려도 계속해서 상단에 위치할 수 있도록 하는 것.-->
+
+    <div id="staticbox">1</div>
+    <div id="staticbox">2</div>
+    <div id="staticbox">3</div>
+    <div id="staticbox">4</div>
+    <hr>
+
+    <div id="relativebox01">1</div>
+    <div id="relativebox02">2</div>
+    <div id="relativebox03">3</div>
+    <div id="relativebox04">4</div>
+
+</body>
+</html>

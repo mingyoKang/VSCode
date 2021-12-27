@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Inline 선언 (제일 높은 우선순위를 가진다.)-->
+    <h2 style="color:blue; background-color: beige; text-align: center;">Title</h2>
+    <hr>
+    <!-- 내부 선언 (위치에 따라 우선순위가 달라진다.)-->
+    <style>
+        /* 해당 아이디를 가진 곳에만 스타일 변화 */
+        #header02
+        {
+            color: black; 
+            background-color: blanchedalmond; 
+            text-align: right;
+        }
+    </style>
+    <h2 id="header02">Title</h2>
+    <hr>
+
+    <!-- 외부 선언 (위치에 따라 우선순위가 달라진다.)-->
+    <link rel="stylesheet" type="text/css" href="01Common.css">
+    <h2>Title</h2>
+    <hr>
+
+</body>
+</html>

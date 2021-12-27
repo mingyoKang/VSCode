@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a{
+            font-size: 30px;
+            display: block;
+            width: 100px;
+            text-align: center;
+        }
+        /* 의사 선택자: 선택하고자 하는 HTML 요소의 특별한 상태를 명시할 때 사용*/
+
+        a:link{
+            color:goldenrod;
+            text-decoration-line: none;
+        }
+
+        /* 커서가 글자 위에 있을 때 색 바뀜 */
+        a:hover{
+            color:green;
+        }
+
+        /* 연결된 곳을 방문하고 난 다음 색 바뀜 */
+        a:visited{
+            background-color: red;
+        }
+
+        #button01{
+            width: 100px;
+            border: 2px dashed tomato;
+            background-color: lightpink;
+        }
+
+        #button01>a{
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        /* 마우스를 갔다대면 커서가 포인터로 바뀐다. */
+        #button01>a:hover{
+            cursor: pointer;
+        }
+
+        /* 클릭한 채로 계속있으면 색 변화가 일어나게 한다. */
+        #button01>a:active{
+            background-color: yellowgreen;
+        }
+
+        #userid{
+            border: 3px solid blue;
+            width: 300px;
+            height: 20px;
+            padding: 10px;
+            outline: none;
+            /* 효과를 변화시킬 때 딜레이되는 시간(초) */
+            transition: 0.5;
+        }
+
+        /* 커서가 인풋 칸 안에 있을 때 경계 변화주기 */
+        #userid:focus{
+            border: 3px solid pink;
+        }
+
+        #userid:hover{
+            border: 3px solid lightseagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://en.wikipedia.org/wiki/Elmo">Elmo</a>
+    <hr>
+    <div id="button01"><a href="https://en.wikipedia.org/wiki/Cookie_Monster">Button</a></div>
+    <hr>
+    ID: <input type="text" id="userid">
+</body>
+</html>
