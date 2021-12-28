@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border: 2px solid tomato;
+            border-radius: 10%;
+            margin: 20px;
+        }
+
+        @keyframes change01 {
+            /* duration의 퍼센테이지로 만약 10초라면
+            0초일 때, 2초일 때, 4초일 때 이렇게 진행된다. */
+            0%{background-color: red;}
+            20%{background-color: orange;}
+            40%{background-color: yellow;}
+            60%{background-color: green;}
+            80%{background-color: blue;}
+            100%{background-color: indigo;}
+        }
+
+        #div01{
+            animation-name: change01;
+            animation-duration: 20s;
+        }
+
+        @keyframes change02 {
+            0%{background-color: red; transform: rotate(0deg); opacity: 0.5;}
+            20%{background-color: orange;}
+            40%{background-color: yellow; transform: rotate(180deg); opacity: 1;}
+            60%{background-color: green;}
+            80%{background-color: blue;}
+            100%{background-color: indigo; transform: rotate(360deg); opacity: 0.2;}
+        }
+
+        #div02{
+            animation-name: change02;
+            animation-duration: 10s;
+        }
+    </style>
+</head>
+<body>
+    <div id="div01"></div>
+    <br>
+    <div id="div02"></div>
+</body>
+</html>

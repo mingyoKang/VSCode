@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        #main{
+            border: 2px solid black;
+            padding: 10px;
+            width: 410px;
+            margin: 0px auto;
+        }
+
+        #main div{
+            width: 400px;
+            height: 40px;
+            border: 3px solid palevioletred;
+
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        @keyframes moving01 {
+            from{left: 600px;}
+            to{left: 0px;}
+        }
+
+        .div01{
+            animation-name: moving01;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes moving02 {
+            from{top: 600px;}
+            to{top:0px}
+        }
+
+        .div02{
+            animation-name: moving02;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes moving03 {
+            from{left: -600px; top: 500px;}
+            to{left: 0px; top: 0px;}
+        }
+
+        .div03{
+            animation-name: moving03;
+            animation-duration: 1.5s;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div id="main">
+        <div class="div01">Test01</div>
+        <br>
+        <div class="div02">Test02</div>
+        <br>
+        <div class="div03">Test03</div>
+    </div>
+</body>
+</html>

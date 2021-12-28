@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: lavenderblush;
+            border: 1px solid palevioletred;
+            margin: 10px;
+
+            position: relative;
+            top: 0px;
+            left: 0px;
+
+            animation-name: moving;
+            animation-duration: 3s;
+        }
+
+        @keyframes moving {
+            from{left: 0px;}
+            to{left: 700px;}
+        }
+
+        /* 애니메이션이 진행되는 속도는 같지만
+        다양한 방식으로 애니메이션에 변화를 줄 수 있다. */
+
+        #div01{
+            /* 항상 일정한 속도로 움직이는 linear */
+            animation-timing-function: linear;
+        }
+
+        #div02{
+            /* 본래 기본값, 빠르게-> 천천히 ease */
+            animation-timing-function: ease;
+        }
+
+        #div03{
+            /* 천천히 -> 빠르게 움직이는 ease-in */
+            animation-timing-function: ease-in;
+        }
+
+        #div04{
+            /* 빠르게 -> 천천히 움직이는 ease-out */
+            animation-timing-function: ease-out;
+        }
+
+        #div05{
+            /* 가운데 지점까지 빠르게 갔다가 지나서는 느려지는 
+            ease-in-out */
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="div01"></div>
+    <div id="div02"></div>
+    <div id="div03"></div>
+    <div id="div04"></div>
+    <div id="div05"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 400px;
+            height: 50px;
+            border: 3px solid palevioletred;
+        }
+
+        /* 애니메이션 이름 정하기 */
+        @keyframes moving01 {
+            /* margin-left:100% 왼쪽 끝 보이지 않는 곳에 있다. */
+            from{margin-left: 60%;}
+            to{margin-left: 0%; border: 3px double palegoldenrod;}
+        }
+
+        #div01{
+            animation-name: moving01;
+            animation-duration: 2s;
+        }
+
+        @keyframes moving02 {
+            /* 아래쪽 보이지 않는 곳에서 */
+            from{margin-top: 60%;}
+            to{margin-top: 0%; border: 3px dashed plum;}
+        }
+
+        #div02{
+            animation-name: moving02;
+            animation-duration: 2s;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="div01">Test01</div>
+    <br>
+    <div id="div02">Test02</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            margin: 20px;
+        }
+
+        @keyframes moving {
+            from{margin-left: 20px;}
+            to{margin-left: 70%}
+        }
+
+        #div01{
+            animation-name: moving;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            /* 애니메이션이 실행되기까지 1초는 기다리기 */
+            animation-delay: 1s;
+            /* 애니메이션 반복 횟수(infinite는 무한반복) */
+            animation-iteration-count: 4;
+            /* 애니메이션이 반대방향으로도 번갈아 일어난다. */
+            animation-direction: alternate;
+        }
+
+        /* 애니메이션을 한 번에 지정할 수도 있다. */
+        #div02{
+            animation: moving 2s ease-in-out 1s 4 alternate;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="div01"></div>
+    <div id="div02"></div>
+</body>
+</html>
