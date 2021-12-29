@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        td{
+            width: 30px;
+            height: 30px;
+            background-color: lightskyblue;
+            text-align: center;
+        }
+
+        table{
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+
+        var dan = 2;
+
+        for(i=0; i<8; i++){
+            document.write("<table>");
+            for(j=0; j<9; j++){
+                document.write("<tr>");
+                    document.write("<td>" + dan + "</td>");
+                    document.write("<td>" + "X" + "</td>");
+                    document.write("<td>" + (j+1) + "</td>");
+                    document.write("<td>" + "=" + "</td>");
+                    document.write("<td>" + (dan*(j+1)) + "</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+            dan++;
+        }
+    </script>
+</body>
+</html>

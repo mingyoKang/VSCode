@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 50%;
+
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        @keyframes moving03 {
+            from{left: 0px;}
+            to{left: 300px;}
+        }
+
+        @keyframes moving04{
+            from{left: 0px; top: 0px;}
+            to{left:100px; top: 300px; transform: rotate(180deg);}
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="function01()">Function01</button>&nbsp;
+    <button onclick="function02()">Function02</button>&nbsp;
+    <button onclick="function03()">Function03</button>&nbsp;
+    <button onclick="function04()">Function04</button>&nbsp;
+    <hr>
+    <div id="div01"></div>
+
+    
+
+    <script>
+        function function01() {
+            // 반환 자료형 상관없이 그냥 return 하면 된다.
+            // alert("function01을 클릭함!");
+            var div01Tag = document.getElementById("div01");
+            div01Tag.style.backgroundColor = "tomato";
+        }
+
+        function function02() {
+            var div01Tag = document.getElementById("div01");
+            div01Tag.style.backgroundColor = "gold";
+        }
+
+        function function03() {
+            var div01Tag = document.getElementById("div01");
+            div01Tag.style.animationName = "moving03";
+            div01Tag.style.animationDuration = "1s";
+            div01Tag.style.backgroundColor = "olive";
+            div01Tag.style.animationDirection = "alternate";
+            div01Tag.style.animationIterationCount = 2;
+        }
+
+        function function04() {
+            var div01Tag = document.getElementById("div01");
+            div01Tag.style.animationName = "moving04";
+            div01Tag.style.animationDuration = "1s";
+            div01Tag.style.animationDirection = "alternate";
+            div01Tag.style.animationIterationCount = "infinite";
+        }
+    </script>
+</body>
+</html>

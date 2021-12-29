@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        td{
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <input type="text" id="text">&nbsp;<button onclick="googoodan()">Print</button>
+    <!-- input에서 받은  값은 value로 -->
+    <hr>
+    <div id="result"></div>
+
+    <script>
+
+        
+
+        function googoodan() {
+            // text로 단수를 입력 받아 해당 단수를 
+            // result에 넣기
+            // text 안의 값은 document.getElementById("text").value;
+
+        var dan = document.getElementById("text").value;
+        
+        // 구구단 테이블을 넣어야하는 위치: document.getElemenyById("result").innerHTML;
+        var result = document.getElementById("result");
+        var code = null;
+        code = "<table>";
+        "<caption>" + dan + "단" + "</caption>";
+
+            for(i=1; i<10; i++){
+                code += "<tr>";
+                    code += "<td>" + dan + "</td>";
+                    code += "<td>" + "X" + "</td>";
+                    code += "<td>" + i + "</td>";
+                    code += "<td>" + "=" + "</td>";
+                    code += "<td>" + (dan*i) + "</td>";
+                code += "</tr>";
+            }
+        code += "</table>";
+        result.innerHTML = code;
+        }
+    </script>
+</body>
+</html>

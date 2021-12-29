@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var num01 = prompt("숫자를 입력하세요: ");
+
+        // 반복문 탈출용 변수
+        var i=0;
+
+        document.write("<ul style= 'padding:0px; list-style: none'>");
+        while(i<num01){
+            document.write("<li>Menu" + (i+1) + "</li>");
+            i++;
+        }
+        document.write("</ul>");
+    </script>
+</body>
+</html>

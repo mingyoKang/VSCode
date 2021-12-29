@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        table{
+            border: 1px solid green;
+            margin: 0 auto;
+        }
+
+        td{
+            width: 50px;
+            height: 50px;
+            background-color: darkkhaki;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var row = 5;
+        var column = 3;
+
+        document.write("<table>");
+        for(i=0; i<5; i++){
+            document.write("<tr>");
+            for (j=0; j<3; j++){
+                document.write("<td>" + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>
