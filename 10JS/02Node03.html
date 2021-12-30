@@ -19,7 +19,7 @@
     <script>
         // 중간 삽입
          // 부모 노드 가져오기
-        var listTag = document.getElementById("list02");
+        // var listTag = document.getElementById("list02");
          // 새 노드 생성01
         var newTag01 = document.createElement("li");
         newTag01.innerHTML = "AFTER";
@@ -36,6 +36,12 @@
 
         // 대상 노드 삭제
         // list02.remove();
+
+        // -> 부모 노드 데려올 필요없이
+        // -> 새 노드를 생성하고 연결하면된다.
+        var mewTag03 = document.createElement("li");
+        newTag02.innerHTML = "I am New";
+        list01.after(newTag03);
         
     </script>
 </body>

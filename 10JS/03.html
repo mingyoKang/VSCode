@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        input{
+            outline: none;
+            border: 0;
+            width: 90%;
+            height: 100%;
+        }
+
+        td{
+            width: 50px;
+            height: 50px;
+            border: 2px solid cornflowerblue;
+        }
+
+        button{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table id="mainTable">
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><button onclick="addRow()">&plus;</button></td>
+        </tr>
+    </table>
+
+
+
+    <script>
+
+        x=1;
+        y=1;
+
+        // 행을 더 늘릴 수 있게 동작하기
+        function addRow() {
+            
+            // 부모 노드 찾기
+            var tableTag = document.getElementById("mainTable");
+
+            // 노드 생성
+            var newTr = document.createElement("tr");
+             // 생성된 행에 숫자 부여
+             newTr.id = "tr" + x + "/" + y;
+
+            var newTd01 = document.createElement("td");
+            var newTd02 = document.createElement("td");
+            var newTd03 = document.createElement("td");
+
+            var newInput01 = document.createElement("input");
+            var newInput02 = document.createElement("input");
+
+            var newButton = document.createElement("button");
+            newButton.innerHTML = "-";
+             // newButton에 기능(속성을 부여)
+             newButton.setAttribute('onclick', 'removeTr("tr'+x+'/'+y+'")');
+             // 작동하지 않았을 때.
+             // 단지 스페이스 바 하나로 동작이 이루어지지 않는건가?
+             // 아하, 만약 newTr.id = "tr" + x + "/" + y;에 
+             // "tr"이 아니라, "tr " 이었다면 프로그램은 돌아갔다.
+             // 그러니까 정확한 사실은 프로그램의 아이디는 스페이스 바
+             // 하나로도 완전히 달라질 수 있다는 것!
+            //  newButton.setAttribute('onclick', 'removeTr("tr'+x+'/'+y+'")');
+
+            // 연결
+            newTd01.appendChild(newInput01);
+            newTd02.appendChild(newInput02);
+            newTd03.appendChild(newButton);
+
+            // newTr.append(newTd01, newTd02, newTd03);
+            newTr.appendChild(newTd01);
+            newTr.appendChild(newTd02);
+            newTr.appendChild(newTd03);
+
+            tableTag.appendChild(newTr);
+             // 수 증가
+             x++; y++;
+        }
+
+        function removeTr(trId) {
+            var trTag = document.getElementById(trId);
+            trTag.remove();
+        }
+    </script>
+</body>
+</html>
