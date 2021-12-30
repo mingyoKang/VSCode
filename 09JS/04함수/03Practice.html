@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #ball{
+            width: 100px;
+            height: 100px;
+            border: 3px solid tomato;
+            background-color: hotpink;
+            border-radius: 50%;
+
+            position: relative;
+            top: 0px;
+            left: 0px;
+
+            /* animation-name: bouncing;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; */
+
+        }
+
+        @keyframes bouncing {
+            0%{top: 0px;}
+            25%{top: 400px;}
+            50%{top: 800px;}
+            75%{top: 400px;}
+            100%{top: 0px;}
+        }
+
+        #start-button{
+            background-color: greenyellow;
+        }
+
+        #stop-button{
+            background-color: tomato;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button onclick="moveL()">&leftarrow;</button>
+    <button id="start-button" onclick="start()">Start</button>
+    <button id="stop-button" onclick="stop()">Stop</button>
+    <button onclick="moveR()">&rightarrow;</button>
+    <hr>
+    <div id="ball"></div>
+
+
+    <script>
+        // 공을 움직이기 위해 정보를 가져온다.
+        var ball = document.getElementById("ball");
+
+        // 공을 좌우로 계속해서 움직이기 위한  변수가 필요하다.
+        var xpos = 0;
+
+        function start() {
+            ball.style.animationName = "bouncing";
+            ball.style.animationDuration = "3s";
+            ball.style.animationIterationCount = "infinite";
+            // 공이 계속 움직일 수 있게 상태를 설정한다.
+            ball.style.animationPlayState = "running";
+            ball.style.animationTimingFunction = "linear";
+        }
+
+        function stop() {
+            ball.style.animationPlayState = "paused";
+        }
+
+        function moveL() {
+            // 아래와 같이 설정하면 한 번 밖에 안 움직이니까.
+            // ball.style.transform = "translate(-100px,0px)";
+
+            // 이렇게 설정해야한다.
+            xpos -= 100;
+            ball.style.transform = "translate("+xpos+"px, 0px)";
+            ball.style.transition = "2s";
+        }
+
+        function moveR() {
+            // ball.style.transform = "translate(100px, 0px)";
+
+            xpos += 100;
+            ball.style.transform = "translate("+xpos+"px, 0px)";
+            ball.style.transition = "2s";
+        }
+    </script>
+</body>
+</html>

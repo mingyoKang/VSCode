@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #result{
+            border: 1px solid blue;
+            height: 500px;
+
+            display: block;
+            width: 500px;
+            margin: 0 auto;
+
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 노드 생성 그리고 추가하기 -->
+
+    <button onclick="addElement()">노드 추가!</button>
+    <hr>
+    <div id="result"></div>
+
+    <script>
+        // 새 노드가 어느 위치에 생성되는 지 알기 위해 변수 생성.
+        var i = 1;
+
+        function addElement() {
+            // 부모 노드 찾기 -> 새 노드 생성 -> 둘을 연결
+
+            //부모 노드 찾기
+            var parent = document.getElementById("result");
+
+            // 새 노드 생성
+             // <p> 태그를 생성한다.
+            var newTag = document.createElement("p");
+             // <p> 태그가 생성된 것을 가시적으로 표현.
+            newTag.innerHTML = i+" p태그가 추가되었습니다!";
+
+            // 둘을 연결 (끝에 연결)
+            // parent.appendChild(newTag); //하나만 추가
+            // parent.append(newTag); //여러개 동시에 추가 가능(,이용)
+
+            // 처음 위치에 연결
+            parent.prepend(newTag);
+            i++;
+
+        }
+    </script>
+</body>
+</html>

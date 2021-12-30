@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="dog.sound();">Woof!</button>&nbsp;
+    <button onclick="dog.tail();">Shaking!</button>&nbsp;
+
+
+    <script>
+        var dog = {
+            "name" : "Brownie",
+            "age" : 3,
+            "kind" : "poodle",
+            "sound" : function(){
+                alert("Woof Woof!");
+            },
+            "tail" : function(){
+                alert("Shaking its tail~~");
+            }
+        };
+
+        // 객체형이라는 것을 알 수 있다.
+        // document.write(dog + "<br>");
+
+        // document.write(dog.name + "<br>");
+        // document.write(dog.age + "<br>");
+
+        // 알림창이 뜬다.
+        // document.write(dog.sound() + "<br>");
+    </script>
+</body>
+</html>

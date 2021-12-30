@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 중간에 노드 추가: before(), after() 그리고 노드 삭제하기: remove() -->
+
+
+    <ul>
+        <li id="list01">Item01</li>
+        <li id="list02">Item02</li>
+        <li id="list03">Item03</li>
+    </ul>
+
+    <script>
+        // 중간 삽입
+         // 부모 노드 가져오기
+        var listTag = document.getElementById("list02");
+         // 새 노드 생성01
+        var newTag01 = document.createElement("li");
+        newTag01.innerHTML = "AFTER";
+
+         // 둘 연결01
+         list02.after(newTag01);
+
+         // 새 노드 생성02
+        var newTag02 = document.createElement("li");
+        newTag02.innerHTML = "BEFORE";
+
+         // 둘 연결02
+        list02.before(newTag02);
+
+        // 대상 노드 삭제
+        // list02.remove();
+        
+    </script>
+</body>
+</html>

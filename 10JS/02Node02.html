@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #location{
+            border: 3px solid olive;
+            height: 400px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="text">&nbsp;
+    <button onclick="travel()">Add</button>
+    <hr>
+
+    <div id="location"></div>
+
+    
+    <script>
+        function travel() {
+            // 부모 노드 찾기 -> 새 노드 생성 -> 둘 연결
+
+            // 일단 input의 값을 받을 수 있게 변수를 만든다.
+            var site = document.getElementById("text");
+
+            // 부모 노드 찾기
+            var parent = document.getElementById("location");
+
+            // 리스트 노드 생성
+            var newTag = document.createElement("li");
+            newTag.innerHTML = site.value;
+             // input 박스 초기화
+            site.value = "";
+
+            // 둘 연결
+            parent.append(newTag);
+        }
+    </script>
+</body>
+</html>

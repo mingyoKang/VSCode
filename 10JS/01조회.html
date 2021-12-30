@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Element 조회(tagName) -->
+
+    <!-- <ul>
+        <li>Item01</li>
+        <li>Item02</li>
+        <li>Item03</li>
+        <li>Item04</li>
+        <li>Item05</li>
+    </ul>
+
+    <script>
+        // tagName으로 요소를 조회하겠다.
+        var listGroup = document.getElementsByTagName("li");
+        document.write("li의 개수: " + listGroup.length + "<br>");
+
+        // 반복문으로 list들의 배경색 지정하기.
+        for(i=0; i<listGroup.length; i++){
+            listGroup[i].style.backgroundColor = "olive";
+        }
+    </script> -->
+
+    <!-- Element 조회(class) -->
+
+    <!-- <ul>
+        <li class="oddList">Item01</li>
+        <li>Item02</li>
+        <li class="oddList">Item03</li>
+        <li>Item04</li>
+        <li class="oddList">Item05</li>
+        <li>Item06</li>
+        <li class="oddList">Item07</li>
+        <li>Item08</li>
+    </ul>
+
+    <script>
+        var oddListGroup = document.getElementsByClassName("oddList");
+        document.write("oddList의 개수 : " + oddListGroup.length);
+
+        for(i=0; i<oddListGroup.length; i++){
+            // 두 가지 방식으로 배경색 혹은 글자색에 변화를 줄 수 있다.
+            // oddListGroup[i].style.backgroundColor = "olive";
+            oddListGroup.item(i).style.color = "tomato";
+        }
+    </script> -->
+
+    <!-- form 태그 찾기 -->
+
+    <!-- <form action="">
+        <input type="text">
+        <input type="password">
+    </form>
+    <hr>
+    <form action="">
+        <input type="text">
+        <input type="password">
+    </form>
+
+    <script>
+        var forms = document.forms;
+
+        // 3차원 배열 방식으로 form에 값을 집어 넣을 수 있다.
+        forms[0][0].value = "helloooo";
+        forms[0][1].value = "2q3erfgv";
+        forms[1][0].value = "Mustgee";
+    </script> -->
+
+    <!-- <form name="form01">
+        <input type="text">
+        <input type="password">
+    </form>
+    <hr>
+    <form name="form02">
+        <input type="text">
+        <input type="password">
+    </form>
+
+    <script>
+        var form01 = document.form01;
+        form01[0].value = "Hello!!";
+        form01[1].value = "123rfkfv";
+
+        var form02 = document.form02;
+        form02[1].value = "234fkdfg";
+    </script> -->
+
+    <!-- QuerySelector -->
+
+    <!-- <ul id="ul01">
+        <li class="c01">1-1Item</li>
+        <li class="c01">1-2Item</li>
+        <li class="c01">1-3Item</li>
+    </ul>
+    <ul id="ul02">
+        <li class="c02">2-1Item</li>
+        <li class="c02">2-2Item</li>
+        <li class="c02">2-3Item</li>
+    </ul>
+
+    <script>
+        // ul01 아이디를 가진 곳에 있는 모든 c01 클래스를 가져온다.
+        var tmp01 = document.querySelectorAll("#ul01 .c01");
+
+        tmp01[0].style.backgroundColor = "olive";
+        tmp01[2].style.color = "pink";
+
+        var tmp02 = document.querySelectorAll("#ul02 .c02");
+
+        tmp02[1].style.backgroundColor = "skyblue";
+    </script> -->
+
+    <script>
+        // 웹문서의 전체 제목 바꾸기.
+        document.title = "MingyoKang";
+
+        // 웹문서의 배경색 바꾸기.
+        document.body.style.backgroundColor = "lightpink";
+    </script>
+</body>
+</html>

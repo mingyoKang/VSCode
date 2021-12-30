@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #basketball{
+            width: 180px;
+
+            position: relative;
+            top: 0px;
+            left: 0px;
+
+            display: none;
+
+            /* animation-name: moving01;
+            animation-duration: 3s;
+            animation-timing-function: linear; */
+        }
+
+        #basketball>img{
+            width: 170px;
+            height: 150px;
+        }
+
+        @keyframes moving01 {
+            0%{top: 0px;}
+            25%{top: 400px;}
+            50%{top: 800px;}
+            75%{top: 400px;}
+            100%{top: 0px;}
+        }
+
+        #soccerball{
+            width: 150px;
+
+            position: relative;
+            top: 0px;
+            left: 200px;
+
+            display: none;
+
+            /* animation-name: moving02;
+            animation-duration: 3s;
+            animation-timing-function: linear; */
+        }
+
+        #soccerball>img{
+            width: 150px;
+            height: 150px;
+        }
+
+        @keyframes moving02 {
+            0%{top: 0px;}
+            25%{top: 300px;}
+            50%{top: 600px;}
+            75%{top: 300px;}
+            100%{top: 0px;}
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <button onclick="bouncingB()">Basketball</button>&nbsp;
+    <button onclick="bouncingS()">Soccerball</button>
+    <hr>
+    
+    <div id="basketball"><img src="images/basketball.webp"></div>
+    <div id="soccerball"><img src="images/soccerball.jpg"></div>
+
+
+    <script>
+        var basketball = document.getElementById("basketball");
+        var soccerball = document.getElementById("soccerball");
+
+        function bouncingB() {
+            basketball.style.display = "block";
+            basketball.style.animationName = "moving01";
+            basketball.style.animationDuration = "3s";
+            basketball.style.animationTimingFunction = "linear";
+            basketball.style.animationPlayState = "running";
+
+            soccerball.style.display = "none";
+        }
+
+        function bouncingS() {
+            soccerball.style.display = "block";
+            soccerball.style.animationName = "moving02";
+            soccerball.style.animationDuration = "3s";
+            soccerball.style.animationTimingFunction = "linear";
+            soccerball.style.animationPlayState = "running";
+
+            basketball.style.display = "none";
+        }
+
+
+    </script>
+</body>
+</html>
