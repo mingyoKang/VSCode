@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #ball{
+            border: 3px solid lightpink;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            position: relative;
+            top: 0px;
+            left: 0px;
+
+            animation-name: bounce;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bounce {
+            0%{top: 0px;}
+            25%{top: 400px;}
+            50%{top: 800px;}
+            75%{top: 400px;}
+            100%{top: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+
+
+
+    <script>
+        // 몇 번이나 키보드가 눌렸는지 알아보기
+        var count = 1;
+        // 계속해서 이동시키기 위해 변수 추가
+        var xpos = 0;
+
+        document.addEventListener("keydown", function(){
+            console.log("Count: " + count);
+
+            //keyboard 아스키 코드 값: up(38), down(40), right(39), left(37)
+
+            var ball = document.getElementById("ball");
+
+            // if문을 사용해서 keyboard에 따라 공 움직이기
+            if(event.keyCode == 39){
+                // 오른쪽 방향키를 눌렀을 때.
+                xpos += 100;
+                ball.style.transform = "translate("+xpos+"px,0px)";
+                ball.style.transition = "2s";
+            }else if(event.keyCode == 37){
+                xpos -= 100;
+                ball.style.transform = "translate("+xpos+"px, 0px)";
+                ball.style.transition = "2s";
+            }else if(event.keyCode == 32){
+                ball.style.borderColor = "olive";
+                ball.style.animationPlayState = "paused";
+            }else if(event.keyCode == 13){
+                ball.style.animationPlayState = "running";
+            }
+            count++;
+        });
+
+    </script>
+</body>
+</html>

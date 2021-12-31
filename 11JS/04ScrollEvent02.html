@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 5000px;
+        }
+        
+        header{
+            height: 30px;
+            background-color: lightgray;
+        }
+
+        nav{
+            height: 60px;
+            background-color: lightsteelblue;
+        }
+
+        content{
+            display: block;
+            height: 800px;
+        }
+
+        #content01{
+            background-color: mediumaquamarine;
+        }
+
+        #content02{
+            background-color: mediumseagreen;
+        }
+
+        #content03{
+            background-color: mediumturquoise;
+        }
+
+        #gnb div{
+            border: 2px solid black;
+            width: 100px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .class01:hover{
+            cursor: pointer;
+            background-color: tomato;
+        }
+
+        .class02:hover{
+            cursor: pointer;
+        }
+
+        .class02:active{
+            background-color: olive;
+        }
+    </style>
+</head>
+<body>
+    <!-- 스크롤이 내려가도 nav 바 고정시키기 -->
+    <div id="wrapper">
+        <header>
+
+        </header>
+        <nav id="gnb">
+            <div class="class01">First</div>
+            <div class="class02">Second</div>
+            <div class="class03">Last</div>
+        </nav>
+        <content id="content01"></content>
+        <content id="content02"></content>
+        <content id="content03"></content>
+    </div>
+
+    <script>
+        var gnb = document.getElementById("gnb");
+
+        document.addEventListener("scroll", function(){
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+
+            if(scrollTop>=40){
+                gnb.style.position = "fixed";
+                gnb.style.left = "9px";
+                gnb.style.right = "9px";
+            }else{
+                // 원상태 복귀
+                gnb.style.position = "static";
+            }
+        });
+    </script>
+</body>
+</html>

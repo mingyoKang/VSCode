@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 5000px;
+        }
+        
+        header{
+            height: 30px;
+            background-color: lightgray;
+        }
+
+        nav{
+            height: 60px;
+            background-color: lightsteelblue;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        content{
+            display: block;
+            height: 800px;
+        }
+
+        #content01{
+            background-color: mediumaquamarine;
+        }
+
+        #content02{
+            background-color: mediumseagreen;
+        }
+
+        #content03{
+            background-color: mediumturquoise;
+        }
+        
+        #content04{
+            background-color: paleturquoise;
+        }
+
+        #gnb div{
+            border: 2px solid olive;
+            width: 240px;
+            height: 40px;
+        }
+
+        #center{
+            text-align: center;
+        }
+
+        #right{
+            line-height: 40px;
+            text-align: center;
+        }
+
+        #right a{
+            text-decoration: none;
+            color: tomato;
+            font-weight: bold;    
+        }
+
+        #left{
+            line-height: 40px;
+        }
+
+        #left input{
+            vertical-align: 15px;
+        }
+
+        .icon{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 스크롤이 내려가도 nav 바 고정시키기 -->
+    <div id="wrapper">
+        <header>
+
+        </header>
+        <nav id="gnb">
+            <div id="left">
+                <img src="images/2561466_menu_icon.svg" style="width: 40px; height: 40px;">
+                <input type="text">
+            </div>
+            <div id="center" style="height: 58px;">
+                <img src="images/7124274_netflix_logo_icon.svg" width="150px" height="55px">
+            </div>
+            <div id="right">
+                <a href="#" class="menu">Account</a>&nbsp;
+                <a href="#" class="menu">Login</a>
+
+                <!-- 숨길 예정 -->
+                <img class="icon" src="images/392531_account_friend_human_man_member_icon (1).svg" width="30px" height="30px">
+                <img class="icon" src="images/211707_cart_icon.svg" width="30px" height="30px">
+            </div>
+        </nav>
+        <content id="content01"></content>
+        <content id="content02"></content>
+        <content id="content03"></content>
+        <content id="content04"></content>
+    </div>
+
+    <script>
+        var gnb = document.getElementById("gnb");
+
+        document.addEventListener("scroll", function(){
+            var scrollTop = document.documentElement.scrollTop;
+            // console.log(scrollTop);
+
+            if(scrollTop>=40){
+                gnb.style.position = "fixed";
+                gnb.style.left = "9px";
+                gnb.style.right = "9px";
+            }else{
+                // 원상태 복귀
+                gnb.style.position = "static";
+            }
+        });
+
+        window.addEventListener("resize", function(){
+            var size = window.outerWidth;
+            var logo = document.getElementById("center");
+            var icon = document.getElementsByClassName("icon");
+            var menu = document.getElementsByClassName("menu");
+
+            if(size>=970){
+                logo.style.display = "block";
+            
+            }else if(size>=800){
+                logo.style.display = "none";
+
+                menu.item(0).style.display = "inline-block";
+                menu.item(1).style.display = "inline-block";
+                icon.item(0).style.display = "none";
+                icon.item(1).style.display = "none";
+
+            }else{
+                menu.item(0).style.display = "none";
+                menu.item(1).style.display = "none";
+                icon.item(0).style.display = "inline-block";
+                icon.item(1).style.display = "inline-block";                
+            }
+        });
+    </script>
+</body>
+</html>

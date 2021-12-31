@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // window는 document의 상위 객체다.
+         // innerWidth는 개발 도구 창을 펼치게되면 그 부분을 제한,
+         // 내용만 보이는 곳이고,
+         // outerWidth는 브라우저의 모든 부분에 대한 넓이를 보여준다.
+        // document.write(window.innerWidth);
+
+        window.addEventListener("resize", function(){
+            // console.log(window.innerWidth);
+            console.log(window.outerWidth);
+        });
+        
+    </script>
+</body>
+</html>

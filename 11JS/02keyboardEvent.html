@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- on 키보드 이벤트 처리 -->
+
+    KEY UP: <input type="text" id="text01"><br>
+    <p id="p01"></p>
+    <hr>
+    KEY DOWN: <input type="text" id="text02"><br>
+    <p id="p02"></p>
+    <hr>
+    KEY PRESS: <input type="text" id="text03"><br>
+    <p id="p03"></p>
+    <hr>
+
+    
+
+    <script>
+        // 부모 노드 찾기
+        var text01 = document.getElementById("text01");
+
+        // 이벤트 생성하기
+         // keyup: 키보드에서 손을 뗄때 이벤트가 동작.
+        text01.addEventListener("keyup", function(){
+            // keyup 이벤트가 일어났고, 객체형이다.
+            // console.log(event.type + " " + event.target);
+            console.log(event.keyCode); // 아스키코드로 출력된다.
+        });
+
+        var text02 = document.getElementById("text02");
+
+         // keydown: 키보드를 누를 때 이벤트가 동작.
+          // keydown은 모든 키보드 자판의 정보를 갖고 있다.
+          // keydown은 알파벳 대소문자를 구분하지 않는다.
+        text02.addEventListener("keydown", function(){
+            const character = String.fromCharCode(event.keyCode);
+            console.log(event.keyCode);
+            // console.log(character);
+        });
+
+        var text03 = document.getElementById("text03");
+
+         // keypress: 키보드를 누를 때 이벤트가 동작.
+          // keypress는 정보가 문자에 한해 있다.
+          // 하지만 keypress에서는 알파벳의 대소문자를 구분한다.
+        text03.addEventListener("keypress", function(){
+            const character = String.fromCharCode(event.keyCode);
+            // console.log(event.keyCode);
+            console.log(character);
+        });
+        
+        
+    </script>
+</body>
+</html>

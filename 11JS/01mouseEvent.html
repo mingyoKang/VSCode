@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div01{
+            border: 3px solid olive;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- on 마우스 이벤트 처리 -->
+
+    <div id="div01">
+        <p id="text">Hello</p>
+    </div>
+
+
+    <script>
+        // 부모 노드 찾기
+        var divTag = document.getElementById("div01");
+
+        // 이벤트 생성
+         // 마우스로 클릭했을 때.
+        divTag.addEventListener("click", function(){
+            document.getElementById("text").innerHTML = "<strong>Clicked!</strong>";
+        }); 
+         // 마우스를 갖다 댔을 때.
+        divTag.addEventListener("mouseover", function(){
+            document.getElementById("text").innerHTML = "Mouse-over";
+            divTag.style.borderColor = "tomato";
+        });
+         // 마우스를 뗐을 때.
+        divTag.addEventListener("mouseleave", function(){
+            document.getElementById("text").innerHTML = "Mouse-leave~";
+            divTag.style.borderColor = "lightpink";
+        });
+    </script>
+</body>
+</html>
