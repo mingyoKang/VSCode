@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            margin: 10px;
+            overflow: auto;
+        }
+
+        ul{
+            width: 300px;
+            height: 300px;
+            border: 2px solid tomato;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- <div id="div01"></div>
+    <div id="div02"></div>
+
+    
+
+    <script>
+        // javaScript로 노드 연결
+         // 부모 노드 찾기
+        var div01 = document.getElementById("div01");
+
+         // 새 노드 생성
+        var newDiv01 = document.createElement("div");
+        newDiv01.innerHTML = "Test";
+        newDiv01.style.borderColor = "orange";
+
+         // 둘 연결
+        div01.appendChild(newDiv01);
+
+        // jquery로 노드 연결
+         // 훨씬 더 간단하게 노드끼리 연결할 수 있다.
+        $("#div02").append("<div style='border-color: red;'>Test~</div>");
+        $("#div02").append("<div style='border-color: green;'>Test~</div>");
+        $("#div02").append("<div style='border-color: orange;'>Test~</div>");
+
+    </script> -->
+
+    <input type="text" id="text"> <button onclick="function01()">Add</button>
+    <hr>
+    <ul id="travel"></ul>
+
+    <script>
+        function function01(){
+            $("#travel").append("<li>" + $("#text").val() + "</li>");
+            $("#text").val(" ");
+        }
+    </script>
+</body>
+</html>

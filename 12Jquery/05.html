@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        body{
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="div01">Hello</div> -->
+
+
+    <!-- 마우스 이벤트 -->
+    <!-- <script>
+        // click
+        $("#div01").on("click", function(){
+            $(this).html("OnClick!!").css("backgroundColor", "tomato").css("color", "white");
+        });
+
+        // mouseover
+        $("#div01").on("mouseover", function(){
+            $(this).html("Mouse-OVER!!!").css("border", "5px solid olive");
+        });
+
+        // mouseleave
+        $("#div01").on("mouseleave", function(){
+            $(this).html("Mouse-Leave!!!").css("color", "pink").css("font-weight", "bold");
+        });
+    </script> -->
+
+    <!-- <input type="text" id="text">
+    <hr>
+    <div id="div01" style="width: 200px; height: 200px; border: 2px solid green;"></div> -->
+
+    <!-- 키보드 이벤트 -->
+    <!-- <script>
+        // 엔터키를 치면 입력되도록 설정.
+        $("#text").on("keydown", function(){
+            var tmp = $("#text").val();
+            if(event.keyCode == 13){
+                $("#div01").append(tmp + "<br>");
+                $("#text").val("");
+            }
+            
+        });
+    </script> -->
+
+    <!-- 스크롤 이벤트 -->
+    <!-- <script>
+        $(window).on("scroll", function(){
+            console.log("Position: " + document.documentElement.scrollTop);
+        });
+    </script> -->
+
+
+    <!-- 웹브라우저 이벤트 -->
+    <script>
+        // $(window).on("resize", function(){
+        //     console.log(window.outerWidth);
+        // });
+
+        $(window).resize(function(){
+            console.log(window.innerWidth);
+        });
+
+        // 제이쿼리를 이용해서 스크롤 이동시 헤더 상단 고정해보기
+        // 제이쿼리를 이용해서 윈도우 사이즈별로 표시되는 헤더 정보 달리 해보기
+    </script>
+</body>
+</html>

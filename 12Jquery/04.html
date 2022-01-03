@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    
+    <ul>
+        <li id="list01">List01</li>
+        <li id="list02">List02</li>
+        <li id="list03">List03</li>
+        <li id="list04">List04</li>
+    </ul>
+
+    <script>
+        $("#list02").before("<li>Before List02</li>");
+        $("#list02").after("<li>After List02</li>");
+    </script>
+</body>
+</html>

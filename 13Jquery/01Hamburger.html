@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+
+        #menu{
+            width: 45px;
+            cursor: pointer;
+        }
+        span{
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: coral;
+            margin: 5px;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="menu">
+        <span id="top"></span>
+        <span id="center"></span>
+        <span id="bottom"></span>
+    </div>
+
+    
+    <script>
+        var flag = false;
+
+        $("#menu").on("click", function(){
+            if(flag == false){
+                $("#top").css("transform", "translate(0px,10px) rotate(45deg)").css("transition", "0.3s");
+                $("#center").css("opacity", "0").css("transition", "0.3s");
+                $("#bottom").css("transform", "translate(0px,-10px) rotate(-45deg)").css("transition", "0.3s");
+                flag = true;
+            }else{
+                $("#top").css("transform", "translate(0px,0px) rotate(0deg)").css("transition", "0.3s");
+                $("#center").css("opacity", "1").css("transition", "0.3s");
+                $("#bottom").css("transform", "translate(0px,0px) rotate(0deg)").css("transition", "0.3s");
+                flag = false;
+            }
+            
+        });
+    </script>
+</body>
+</html>

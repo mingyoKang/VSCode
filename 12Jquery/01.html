@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery 최신 버전 이용하기 -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    
+    <!-- 노드 탐색 + CSS 적용 -->
+
+    <!-- <div id="div01">Hello World!</div>
+    <div id="div02">Hello World!</div>
+    <div id="div03">Hello World!</div>
+    <div id="div04">Hello World!</div>
+
+    <script>
+        // 자바스크립트를 이용해 div01 태그의 배경색을 바꾸기.
+        var div01 = document.getElementById("div01");
+        div01.style.backgroundColor = "orange";
+
+        // jquery를 이용해 div02 태그의 배경색을 바꾸기.
+        $("#div02").css("background-color", "olive").css("color", "white");
+        $("#div03").css("backgroundColor", "gold").css("width", "200px");
+        $("#div04").css({"backgroundColor": "skyblue", "color":"pink"});
+    </script> -->
+
+    <!-- each -->
+
+    <script>
+        // 1) 기본 객체
+        // var object01 = {"name": "hong", "age": "45", "height":"174.2"};
+
+        // // key와 value 값 각각 보이게하기.
+        // $.each(object01, function(key,value){
+        //     document.write(value + "<br>");
+        // });
+
+        // 2) 배열형 객체
+        // var object02 = ["kang", "35", "160.3", "46"];
+        
+        // $.each(object02, function(key,value){
+        //     document.write(key + "<br>"); // key는 인덱스 번호로 나온다.
+        // });
+
+        // 3)
+
+        // var person = {
+        //     "name":"mingyoKang",
+        //     "age":26,
+        //     "major": "English Lang&Lit",
+        //     "certificate":["TOEIC", "TEPs", "OPIC"]
+        // }
+
+        // $.each(person, function(key,value){
+        //     // document.write(key + " : " + value + "<br>");
+        //     // 만약 certificate에 있는 값 각각을 보고 싶다면.
+        //     if(key == "certificate"){
+        //         document.write(key +" : " + value[0] + "<br>"); // value[]에 인덱스 값을 넣는다.
+        //     }
+        // });
+
+    </script>
+
+    <!-- each를 이용해서 key, value를 구별한 다음(제이쿼리)
+         p 태그 안에 내용을 넣자(자바스크립트 코드) -->
+
+    <!-- <p id="p01" style="width:200px; height: 200px; border: 2px solid tomato;"></p>
+
+    <script>
+
+        var bookinfo = {
+            "bookcode":"250456",
+            "bookname":"DOITJAVA",
+            "publisher":"EasyPublishing",
+            "price":"25000"
+        };
+
+        var p01 = document.getElementById("p01");
+
+        $.each(bookinfo, function(key,value){
+            p01.innerHTML += key + " : " + value + "<br>";
+        });
+    </script> -->
+
+    <script>
+        var object01 = [{"name":"Kang", "age":"26"}, {"name":"Lee", "age":"34"}, {"name":"Park", "age":"14"}, {"name":"Kwon", "age":"23"}];
+
+        // document.write("개수: " + object01.length);
+
+        $.each(object01, function(key,value){
+            // document.write(key + " : " + value + "<br>");
+            $.each(value, function(key01, value01){
+                document.write(key01 + " : " + value01 + "<br>");  
+            });
+            document.write("------------------------<br>");
+        });
+    </script>
+</body>
+</html>
