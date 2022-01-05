@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <style>
+        #wrapper{
+            width: 90%;
+            height: 800px;
+            border: 1px solid black;
+            
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        #modal{
+            width: 300px;
+            height: 300px;
+            border: 1px solid gray;
+            background-color: cadetblue;
+
+            display: none;
+        }
+
+        #modal>div{
+            text-align: right;
+            padding-right: 3px;
+        }
+
+        #modal>div a{
+            text-decoration: none;
+        }
+
+        #modal h3{
+            text-align: center;
+        }
+
+        #modal form{
+            text-align: center;
+        }
+
+        /* modal 창을 띄울 때 애니메이션 설정 */
+        @keyframes moving01 {
+            from{left:80%}
+            to{left:30%}
+        }
+
+        /* modal 창이 사라질 때 애니메이션 */
+        @keyframes moving02 {
+            from{left:30%}
+            to{left:80%}
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Open Modal</button>
+
+    <div id="wrapper">
+        <div id="modal">
+            <div><a href="">X</a></div>
+            <h3>Login</h3>
+            <form action="">
+                <input type="text">
+                <input type="password">
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        // 전역 변수로 background 선언.
+        var bg = null;
+        // 화면 가장 위로 설정할 수 있는 z-index 선언, 정의.
+        var zIdx = 999;
+        // 버튼을 한 번 더 누르면 모달창이 꺼질 수 있도록 설정하기 위한
+        // flag 선언하기.
+        var flag = false;
+
+        
+        // 버튼을 클릭하면 모달창이 뜨도록
+        $("#button").on("click",function(){
+            // 일단 백그라운드 요소를 생성한다(모달창이 뜰 때 뒷 화면은 어둡게 설정)
+            // 백그라운드 요소를 연결한다.
+            // 모달창을 띄운다.
+
+            if(flag == false){
+               // 1) 백그라운드 요소 생성
+            bg = $("<div id='bg'></div>");
+            // 1-1) 생성된 백그라운드를 어둡게 설정
+            bg.css({
+                "width": "100%",
+                "height": "100%",
+                "position": "absolute",
+                "left": "0px",
+                "top": "0px",
+                "background-color": "gray",
+                "opacity": "0.3",
+                "z-index": zIdx
+            });
+
+            // 2) 백그라운드 연결
+            $("#wrapper").append(bg);
+
+            // 3) 모달창 띄우기
+            $("#modal").css({
+                "position": "absolute",
+                "left": "30%",
+                "top": "30%",
+                "display": "block",
+                "z-index": zIdx+1,
+                "animation-name": "moving01",
+                "animation-duration": "1s"
+            });
+            flag = true;
+            }else{
+                // 백그라운드 제거
+                $("#bg").remove();
+                // 모달창 없애기
+                $("#modal").css({
+                    "display": "none",
+                    "animation-name": "moving02",
+                    "animation-duration": "1s",
+                    "z-index": zIdx+1
+                });
+
+                flag = false;
+            }
+            
+        });
+    </script>
+
+</body>
+</html>
