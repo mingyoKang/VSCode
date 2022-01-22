@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
     
     <style>
 
@@ -35,7 +39,7 @@
             margin-top: 15px;
         }
 
-        nav div{
+        nav>div{
             display: inline-block;
             border: 1px solid green;
         }
@@ -227,8 +231,26 @@
             height: 250px;
             border-radius: 125px;
             padding: 50px 70px 0;
+            margin-left: 25%;
         }
 
+        .carousel-item{
+            margin-top: 90px;
+        }
+
+        .carousel-item p{
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .newsDate{
+            font-size: 24px;
+        }
+
+        .newsArticle{
+            font-size: 44px;
+            font-family: "맑은고딕";
+        }
 
 
         
@@ -238,18 +260,45 @@
     <div id="wrapper">
         <header>
             <nav>
-                <div id="burgerMenu">
+                <div id="burgerMenu" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                     <span class="top" style="height: 15px; border-top-left-radius: 50%; border-top-right-radius: 50%;"></span>
                     <span class="center"></span>
                     <span class="bottom"></span>
+                    
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <div>
+                            <p>home</p>
+                            <p>메뉴</p>
+                            <p>프로모션</p>
+                            <p>매장찾기</p>
+                        </div>
+                        <div>
+                            <p>브랜드스토리</p>
+                            <p>고객문의</p>
+                            <p>가맹안내</p>
+                            <p>(주)맘스터치앤컴퍼니</p>
+                        </div>
+                        <div id="links">
+                            <a href="#"><img src="images/instagram.svg"></a>
+                            <a href="#"><img src="images/facebook.svg"></a>
+                            <a href="#"><img src="images/youtube.svg"></a>
+                        </div>
+                        
+                      </div>
+                    </div>                    
                 </div>
                 <div id="logoText"><sapn style="font-size: 30px;">MOM'S TOUCH</sapn></div>
                 <div>
-                    <div id="help">
+                    <div id="help" style="display: inline-block;">
                         <span>가맹문의</span>
                         <span>고객문의</span>
                     </div>
-                    <div id="links">
+                    <div id="links" style="display: inline-block;">
                         <a href="#"><img src="images/instagram.svg"></a>
                         <a href="#"><img src="images/facebook.svg"></a>
                         <a href="#"><img src="images/youtube.svg"></a>
@@ -257,6 +306,25 @@
                 </div>
             </nav>
         </header>
+        <section>
+            <div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/1633480196-GHRUW.png" style="border: 1px solid black;" class="d-block w-100">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </section>
         <section>
             <div id="momsFranchise">
                 <div><img style="width: 100%; height: 370px;" src="images/bg_franchise_1.jpg" alt=""></div>
@@ -266,8 +334,46 @@
                     <button style="background-color: #734630; color: white; width: 240px; height: 60px; border-radius: 30px; font-size: 16px;">가맹점 문의하기</button>
                 </div>
             </div>
-            <div id="momsNews">
-
+            <div id="momsNews" style="border: 1px solid tomato;">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height: 300px;">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-primary" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="bg-primary" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class="bg-primary" aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <p class="newsDate">2021-11-15</p>
+                        <p class="newsArticle">맘스터치 소자본 창업 희망 프로젝트</p>
+                      </div>
+                      <div class="carousel-item">
+                        <p class="newsDate">2021-03-16</p>
+                        <p class="newsArticle">제품 영양성분 정보(2021년 12월 30일 업데이트)</p>
+                      </div>
+                      <div class="carousel-item">
+                        <p class="newsDate">2021-03-16</p>
+                        <p class="newsArticle">알레르기 유발제품 표시(2021년 12월 30일 업데이트)</p>
+                      </div>
+                      <div class="carousel-item">
+                        <p class="newsDate">2021-03-16</p>
+                        <p class="newsArticle">원산지 표시판(2021년 12월 30일 업데이트)</p>
+                      </div>
+                      <div class="carousel-item">
+                        <p class="newsDate">2021-03-01</p>
+                        <p class="newsArticle">맘스터치 모바일 쿠폰 사용불가 매장 안내</p>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon bg-warning" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon bg-success" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
             <div id="momSns">
                 <img src="images/bg_sns.jpg">
@@ -364,5 +470,12 @@
             </div>
         </footer>
     </div>
+
+
+
+    <script>
+
+
+    </script>
 </body>
 </html>
