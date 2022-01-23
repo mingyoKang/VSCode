@@ -256,6 +256,43 @@
             border: 1px solid green;
         }
 
+        #fixedMenu{
+            z-index: 9998;
+        }
+        
+        #fixedImage{
+            border: 1px solid red;
+            z-index: 9999;
+            text-align: right;
+            width: 550px;
+        }
+
+
+        #fixedImageSong{
+            border: 1px solid black;
+            z-index: 9999;
+            float: right;
+
+            position: relative;
+        }
+
+        #fixedImageSong:hover{
+            cursor: pointer;
+        }
+
+        #hiddenDiv{
+            display: none;
+            height: 100%;
+            background-color: cornflowerblue;
+            color: white;
+            float: left;
+            text-align: left;
+        }
+
+        #hiddenDiv img{
+            margin: 0 10px;
+        }
+
 
 
 
@@ -264,7 +301,7 @@
 </head>
 <body>
     <div id="wrapper">
-        <header>
+        <header id="fixedMenu">
             <nav>
                 <div id="burgerMenu" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                     <span class="top" style="height: 15px; border-top-left-radius: 50%; border-top-right-radius: 50%;"></span>
@@ -315,9 +352,9 @@
         <section>
             <div>
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style="height: 650px;">
                       <div class="carousel-item active">
-                        <img src="images/1633480196-GHRUW.png" style="border: 1px solid black;" class="d-block w-100">
+                        <img src="images/1633480196-GHRUW.png" class="d-block w-100">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -330,6 +367,16 @@
                     </button>
                   </div>
             </div>
+            <div id="fixedImage">
+                <img src="images/song_order.png" id="fixedImageSong">
+                <div id="hiddenDiv">
+                    <p><small>앱에서 간편하게 주문하세요</small></p>
+                    <a href="https://momstouchdev.co.kr/"><img src="images/btn_momstouch.png"></a>
+                    <a href="https://www.baemin.com/"><img src="images/btn_baemin.png"></a>
+                    <a href="https://www.yogiyo.co.kr/mobile/#/"><img src="images/btn_yogiyo.png"></a>
+                </div> 
+            </div>
+
         </section>
         <section>
             <div id="momsFranchise">
@@ -479,5 +526,53 @@
 
 
 
+
+    <script>
+
+        var fixedMenu = document.getElementById("fixedMenu");
+
+        document.addEventListener("scroll", function(){
+            var scrollTop = document.documentElement.scrollTop;
+
+            if(scrollTop>=40){
+                fixedMenu.style.position = "fixed";
+                fixedMenu.style.backgroundColor = "white";
+                fixedMenu.style.top = "-5px";
+            }else{
+                // 원상태 복귀
+                fixedMenu.style.position = "static";
+            }
+        });
+
+        var fixedImage = document.getElementById("fixedImage");
+        var fixedImageSong = document.getElementById("fixedImageSong");
+
+        document.addEventListener("scroll", function(){
+            var scrollTop = document.documentElement.scrollTop;
+            // console.log(scrollTop);
+
+            if(scrollTop>0){
+                fixedImage.style.position = "fixed";
+                fixedImage.style.marginLeft = "65%"
+            }else{
+                fixedImage.style.position = "static";
+            }
+        });
+        
+        var flag = false;
+        fixedImageSong.addEventListener("click", function(){
+            var hiddenDiv = document.getElementById("hiddenDiv");
+            
+
+            if(flag == false){
+               hiddenDiv.style.display = "inline-block";
+               flag = true;
+            }else{
+                hiddenDiv.style.display = "none";
+                flag = false;
+            }
+            
+        });
+    </script>
 </body>
 </html>
