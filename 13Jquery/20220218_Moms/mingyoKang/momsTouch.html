@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    
+    <style>
+
+        *{
+            margin: 5px auto;
+        }
+        body{
+            height: 4500px;
+        }
+        #wrapper{
+            border: 1px solid black;
+            width: 99%;
+            height: 100%;
+        }
+
+        header{
+            border: 1px solid tomato;
+            background-color: tomato;
+            width: 99%;
+            height: 100px;
+        }
+
+        nav{
+            border: 2px solid gold;
+            background-color: gold;
+            display: flex;
+            flex-direction: row;
+            width: 99%;
+            margin-top: 15px;
+        }
+
+        nav div{
+            display: inline-block;
+        }
+
+        #burgerMenu span{
+            display: block;
+            background-color: black;
+            width: 35px;
+            height: 5px;
+            margin: 2px;
+        }
+
+        #burgerMenu{
+            border: 1px solid green;
+        }
+
+        #logoText{
+            border: 1px solid green;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        #help span{
+            display: inline-block;
+            margin: 0px 10px;
+        }
+
+        #links img{
+            width: 30px;
+            height: 30px;
+            margin: 0px 5px;
+        }
+
+        section{
+            border: 1px solid blue;
+            width: 99%;
+        }
+
+        footer{
+            border: 1px solid olive;
+            width: 99%;
+            height: 400px;
+        }
+
+        #footerContent01{
+            border: 1px solid tomato;
+            text-align: center;
+            margin: 50px 0px;
+        }
+
+        #footerContent01 a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #footerContent01 span{
+            margin: 0px 20px;
+        }
+
+        #footerContent02{
+            border: 1px solid orange;
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        #footerContent03{
+            border: 1px solid purple;
+            text-align: center;
+        }
+
+        #footerContent04{
+            border: 1px solid green;
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        #footerContent04 img{
+            width: 40px;
+            height: 40px;
+            margin: 0px 5px;
+        }
+
+        #footerContent05 small{
+            border: 1px solid black;
+            display: block;
+            text-align: center;
+        }
+
+        #bottomMenu{
+            border: 1px solid brown;
+        }
+
+        #bottomMenu p{
+            border: 1px solid green;
+            margin: 40px 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        #bottomMenu>ul{
+            border: 1px solid olivedrab;
+            text-align: center;
+            margin: 15px 0px;
+            list-style: none;
+            padding: 0px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #bottomMenu>ul>li{
+            display: inline-block;
+            border: 1px solid red;
+            height: 300px;
+            width: 200px;
+            font-size: 20px;
+            margin: 0px 10px;
+
+        }
+
+        .bigMenu{
+            font-weight: bold;
+        }
+
+        .bigMenu ul{
+            list-style: none;
+            padding: 0px;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .bigMenu>ul li{
+            margin-top: 15px;
+        }
+
+        #momsapp{
+            border: 1px solid coral;
+            display: flex;
+        }
+
+        #momsapp div{
+            display: inline-block;
+            border: 1px solid black;
+        }
+
+        .nearshop{
+            width: 300px;
+            height: 269px;
+            background-color: white;
+        }
+
+        #img02 {
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        #momSns{
+            border: 1px solid tomato;
+            height: 418px;
+        }
+
+        #snsImg{
+            list-style: none;
+            padding: 0px;
+            text-align: center;
+
+            border: 1px solid blue;
+
+            vertical-align: middle;
+        }
+
+        #snsImg li{
+            display: inline-block;
+        }
+
+        #snsImg>li img{
+            width: 237px;
+            height: 237px;
+        }
+
+        #momsAd{
+            border: 2px solid orangered;
+            background-color: #f5e6ca;
+        }
+
+        .hamburgerMenu01 span{
+            font-weight:bold;
+            color: #F9F5E0;
+            font-size: 30px;
+        }
+
+        .hamburgerMenu02 small{
+            font-weight: bold;
+            color: #F9F5E0;
+            font-size: 16px;
+        }
+        #momsNews {
+            height: 300px;
+        }
+
+        #momsFran{
+            height: 460px;
+        }
+
+        #momsBigMenu{
+            height: 1030px;
+        }
+
+        
+    </style>
+
+        
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <nav id="gnb">
+                
+                <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <div id="burgerMenu">
+                        <span class="top" style="height: 15px; border-top-left-radius: 50%; border-top-right-radius: 50%;"></span>
+                        <span class="center"></span>
+                        <span class="bottom"></span>
+                    </div>
+                  </a>
+                  
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class = "hamburgerMenu01" style = "display: block; margin-bottom: 20px;">
+                        <span>home</span><br>
+                        <span>메뉴</span><br>
+                        <span>프로모션</span><br>
+                        <span>매장찾기</span><br>
+                      </div>
+                      <div class = "hamburgerMenu02" style = "display: block; margin-bottom: 40px;">
+                          <small>브랜드스토리</small><br>                          <small>고객문의</small>
+                          <small>가맹안내</small><br>
+                          <small>(주)맘스터치앤컴퍼니</small><br>
+                      </div>
+                      <div style = "display: block;" id="links">
+                        <a href="#"><img src="images/instagram.svg"></a>
+                        <a href="#"><img src="images/facebook.svg"></a>
+                        <a href="#"><img src="images/youtube.svg"></a>
+                    </div>
+                    </div>
+                  </div>
+                <div id="logoText"><sapn style="font-size: 30px;">MOM'S TOUCH</sapn></div>
+                <div>
+                    <div id="help">
+                        <span>가맹문의</span>
+                        <span>고객문의</span>
+                    </div>
+                    <div id="links">
+                        <a href="#"><img src="images/instagram.svg"></a>
+                        <a href="#"><img src="images/facebook.svg"></a>
+                        <a href="#"><img src="images/youtube.svg"></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="swiper" id="momsBigMenu">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/1633480196-GHRUW.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/1616122384-JFZQU.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/1616409946-ASUDD.jpg">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>            
+            </div>            
+            <div class="swiper" id="slideMenu" style="border: 1px solid black;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #ffaa01; background-image: url(images/1616054007-PZNFA.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images/1616054523-YFWKG.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">                     
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #edc06b; background-image: url(images/1616054553-VUFDS.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #d4aa70; background-image: url(images/1616054601-MDONV.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images/1616054650-OECPN.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>                                                                                            
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #ffaa01; background-image: url(images/1616054783-XMVKX.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images/1616054932-KRCAV.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #edc06b; background-image: url(images/1616479043-FJDVN.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">   
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #d4aa70; background-image: url(images/1616480109-NHROT.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">   
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images/1616480122-HYWCI.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>                                                                                        
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #ffaa01; background-image: url(images02/1616053678-XUQPV.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images02/1616055241-EYPWG.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #edc06b; background-image: url(images02/1616055336-FOPBZ.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #d4aa70; background-image: url(images02/1616055398-ZHVMP.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images02/1616055649-ICSFA.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #ffaa01; background-image: url(images02/1616117959-NRURE.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>    
+                    <div class="swiper-slide">   
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images02/1616118035-RABFL.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>    
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #edc06b; background-image: url(images02/1616118072-VGNNE.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>    
+                    <div class="swiper-slide">   
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #d4aa70; background-image: url(images02/1616389661-LLPDG.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>     
+                    <div class="swiper-slide">    
+                        <div style="display: inline-block; width: 326px; height: 520px; background-color: #f6842b; background-image: url(images/1616480109-NHROT.png); background-repeat: no-repeat; background-size: 300px 300px; background-position: center;"></div>
+                    </div>             
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>           
+            </div>
+            <div class="swiper" id="momsAd">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="text-align: center;">
+                        <img src="images/1638170762-LVVIC.png">
+                    </div>
+                    <div class="swiper-slide" style="text-align: center;">
+                        <img src="images/1638401491-KWTLE.png">
+                    </div>
+                    <div class="swiper-slide" style="text-align: center;">
+                        <img src="images/1639523949-ZZPRN.png">
+                    </div>
+                </div>
+              
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+            </div>
+            <div id="momsFran" style="background-image: url(images/bg_franchise_1.jpg);">
+                <p>가맹점 문의</p>
+            </div>
+            <p style = "text-align: center;">MOM'S NEWS</p>
+            <div class="swiper" id = "momsNews">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style = "text-align: center;">
+                        <p style = "color: #c2b396; font-size: 24px;">2021-11-15</p>
+                        <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">맘스터치 소자본 창업 희망 프로젝트</p>
+                    </div>
+                    <div class="swiper-slide" style = "text-align: center;">
+                        <p style = "color: #c2b396; font-size: 24px;">2021-03-16</p>
+                        <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">제품 영양성분 정보(2021년 12월 30일 업데이트)</p>
+                    </div>
+                    <div class="swiper-slide" style = "text-align: center;">
+                        <p style = "color: #c2b396; font-size: 24px;">2021-03-16</p>
+                        <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">알레르기 유발제품 표시(2021년 12월 30일 업데이트)</p>
+                    </div>
+                    <div class="swiper-slide" style = "text-align: center;">
+                        <p style = "color: #c2b396; font-size: 24px;">2021-03-16</p>
+                        <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">원산지 표시판(2021년 12월 30일 업데이트)</p>
+                    </div>
+                    <div class="swiper-slide" style = "text-align: center;">
+                        <p style = "color: #c2b396; font-size: 24px;">2021-03-01</p>
+                        <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">맘스터치 모바일 쿠폰 사용불가 매장 안내</p>
+                    </div>                                                 
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>                  
+            </div>
+            <div id="momSns" style="background-image: url(images/bg_sns.jpg);">
+                <ul id="snsImg">
+                    <li><a href="https://www.instagram.com/momstouch.love/" target="_blank"><img src="images/1617093689-FFYKC.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/momstouch.love/" target="_blank"><img src="images/1617093699-MSBPG.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/momstouch.love/" target="_blank"><img src="images/1617093715-LJWXN.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/momstouch.love/" target="_blank"><img src="images/1617093724-IKHOP.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/momstouch.love/" target="_blank"><img src="images/1617093733-ZNZHF.png" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div id="momsapp" style="background-color: #e3d6bf;">
+                <div><img src="images/bg_shop.jpg"></div>
+                <div class="nearshop">
+                    <span>가장 가까운 맘스터치 매장</span>
+                    <h1>대구동성로점</h1>
+                    <p>대구 중구 동성로6길 75 (공평동) 1층</p>
+                    <small>open</small> <span>10:00~23:00</span>
+                </div>
+                <div id="img02"><img src="images/bg_app.jpg"></div>
+                <div>
+                    <span><strong>맘스터치 APP</strong>에서도<br>주문이 가능해요!</span>
+                </div>
+                <div><small>지금 바로<br> 주문하세요!</small></div>
+            </div>
+            <div id="bottomMenu">
+                <p>MOM'S TOUCH</p>
+                <hr>
+                <ul>
+                    <li class="bigMenu">메뉴
+                        <ul>
+                            <li>New!</li>
+                            <li>버거</li>
+                            <li>치킨</li>
+                            <li>맘스세트</li>
+                            <li>사이드</li>
+                            <li>음료</li>
+                        </ul>
+                    </li>
+                    <li class="bigMenu">프로모션</li>
+                    <li class="bigMenu">매장찾기</li>
+                    <li class="bigMenu">브랜드스토리
+                        <ul>
+                            <li>브랜드소개</li>
+                            <li>광고영상</li>
+                            <li>공지사항</li>
+                            <li>오시는길</li>
+                            <li>(주)맘스터치앤컴퍼니</li>
+                        </ul>
+                    </li>
+                    <li class="bigMenu">고객문의
+                        <ul>
+                            <li>자주하는 질문</li>
+                            <li>1:1 문의</li>
+                        </ul>
+                    </li>
+                    <li class="bigMenu">가맹안내
+                        <ul>
+                            <li>성공안내</li>
+                            <li>개설절차</li>
+                            <li>FAQ</li>
+                            <li>상담문의</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div id="footerContent01">
+                <a href=""><span>이용약관</span></a>
+                <a href=""><span>개인정보처리방침</span></a>
+                <a href=""><span>이메일 무단 수집거부</span></a>
+                <a href=""><span>콘텐츠 사용 약정 신청</span></a>
+            </div>
+            <div id="footerContent02">
+                <span>고객 상담 전화</span>
+                <span style="font-weight: bold;">1661-4205</span>
+                <span>상담 가능 시간</span>
+                <span style="font-weight: bold;">월~금, 공휴일 제외 10:00 ~ 19:00(점심시간 12:00 ~ 13:00)</span>
+            </div>
+            <div id="footerContent03">
+                <small>㈜맘스터치앤컴퍼니 대표 : 김동전 서울시 강동구 천호대로 1077 이스트센트럴타워 24,25층 사업자등록번호 676-86-00102</small><br>
+                <small>통신판매업 신고번호 : 제2015-서울강동-0155호 대표전화 1661-4205 팩스 02-418-0279, 070-4676-0635</small>
+            </div>
+            <div id="footerContent04">
+                <a href="#"><img src="images/instagram.svg"></a>
+                <a href="#"><img src="images/facebook.svg"></a>
+                <a href="#"><img src="images/youtube.svg"></a>
+            </div>
+            <div id="footerContent05">
+                <small>COPYRIGHT © MOMS TOUCH. ALL RIGHTS RESERVED.</small>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script>
+        var gnb = document.getElementById("gnb");
+
+        document.addEventListener("scroll", function(){
+            var top = document.documentElement.scrollTop;
+
+            if(top>=100){
+                gnb.style.display = "fixed";
+                
+            }else{
+                gnb.style.display = "static";
+            }
+        });
+
+        const swiper02 = new Swiper('#momsNews', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+
+        });
+
+        const swiper01 = new Swiper('#momsAd', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+
+        });
+
+        const swiper03 = new Swiper('#momsBigMenu', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+
+        });
+
+        const swiper04 = new Swiper('#slideMenu', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 5,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+
+        });
+    </script>
+</body>
+</html>
