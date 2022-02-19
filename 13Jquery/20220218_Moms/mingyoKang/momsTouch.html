@@ -180,28 +180,6 @@
             margin-top: 15px;
         }
 
-        #momsapp{
-            border: 1px solid coral;
-            display: flex;
-        }
-
-        #momsapp div{
-            display: inline-block;
-            border: 1px solid black;
-        }
-
-        .nearshop{
-            width: 300px;
-            height: 269px;
-            background-color: white;
-        }
-
-        #img02 {
-            position: relative;
-            top: 0px;
-            left: 0px;
-        }
-
         #momSns{
             border: 1px solid tomato;
             height: 418px;
@@ -211,8 +189,6 @@
             list-style: none;
             padding: 0px;
             text-align: center;
-
-            border: 1px solid blue;
 
             vertical-align: middle;
         }
@@ -411,8 +387,9 @@
                 <div class="swiper-button-next"></div>
             
             </div>
-            <div id="momsFran" style="background-image: url(images/bg_franchise_1.jpg);">
-                <p>가맹점 문의</p>
+            <div id="momsFran" style="background-image: url(images/bg_franchise_1.jpg); padding-top: 40px;">
+                <div style="background-color: white; width: 900px; height: 300px; border: 1px solid black; border-radius: 48%;">
+                </div>
             </div>
             <p style = "text-align: center;">MOM'S NEWS</p>
             <div class="swiper" id = "momsNews">
@@ -443,7 +420,7 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>                  
             </div>
-            <div id="momSns" style="background-image: url(images/bg_sns.jpg);">
+            <div id="momSns" style="background-image: url(images/bg_sns.jpg); background-position: center; padding-top: 80px;">
                 <ul id="snsImg">
                     <li><a href="https://www.instagram.com/momstouch.love/" target="_blank"><img src="images/1617093689-FFYKC.png" alt=""></a></li>
                     <li><a href="https://www.instagram.com/momstouch.love/" target="_blank"><img src="images/1617093699-MSBPG.png" alt=""></a></li>
@@ -454,19 +431,21 @@
             </div>
         </section>
         <section>
-            <div id="momsapp" style="background-color: #e3d6bf;">
-                <div><img src="images/bg_shop.jpg"></div>
-                <div class="nearshop">
-                    <span>가장 가까운 맘스터치 매장</span>
-                    <h1>대구동성로점</h1>
-                    <p>대구 중구 동성로6길 75 (공평동) 1층</p>
-                    <small>open</small> <span>10:00~23:00</span>
+            <div id="momsapp" style="background-color: #e3d6bf; text-align: center; border: 1px solid blue;">
+                <div style="border: 1px solid black; width: 630px; height: 269px; display: inline-block; position: relative;">
+                    <img src="images/bg_shop.jpg" style="display: inline-block;">
+                    <div style="display: inline-block; border: 1px solid blue; background-color: white; position: relative; left: 20px; top: -70px; text-align: left;">
+                        <span>가장 가까운 맘스터치 매장</span>
+                        <h1>대구동성로점</h1>
+                        <p>대구 중구 동성로6길 75 (공평동) 1층</p>
+                        <small>open</small> <span>10:00~23:00</span> 
+                    </div>
                 </div>
-                <div id="img02"><img src="images/bg_app.jpg"></div>
-                <div>
-                    <span><strong>맘스터치 APP</strong>에서도<br>주문이 가능해요!</span>
+                <div style="border: 1px solid black; width: 457px; height: 269px; display: inline-block; position: relative;">
+                    <img src="images/bg_app.jpg" style="display: inline-block;">
+                    <span style="border: 1px solid black; display: inline-block; position: absolute; left: 200px; top: 35px;"><strong>맘스터치 APP</strong>에서도<br><span style="text-decoration: underline; text-decoration-color: yellow;">주문이 가능해요!</span></span>
+                    <small style="display: inline-block; position: absolute; border: 1px solid blue; left: 330px; top: 150px;">지금 바로<br> 주문하세요!</small>
                 </div>
-                <div><small>지금 바로<br> 주문하세요!</small></div>
             </div>
             <div id="bottomMenu">
                 <p>MOM'S TOUCH</p>
