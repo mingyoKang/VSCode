@@ -27,14 +27,13 @@
 
         header{
             border: 1px solid tomato;
-            background-color: tomato;
             width: 99%;
-            height: 100px;
+            height: 120px;
         }
 
         nav{
             border: 2px solid gold;
-            background-color: gold;
+            background-color: #666;
             display: flex;
             flex-direction: row;
             width: 99%;
@@ -47,10 +46,10 @@
 
         #burgerMenu span{
             display: block;
-            background-color: black;
-            width: 35px;
+            background-color: #f9f5e0;
+            width: 40px;
             height: 5px;
-            margin: 2px;
+            margin: 5px;
         }
 
         #burgerMenu{
@@ -228,6 +227,14 @@
             height: 1030px;
         }
 
+        #closeMenu span{
+            display: block;
+            background-color: #f9f5e0;
+            width: 40px;
+            height: 5px;
+            margin: 5px;
+        }
+
         
     </style>
 
@@ -248,22 +255,29 @@
                   
                   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                      <button data-bs-dismiss="offcanvas" aria-label="Close" style="margin-top: 20px; margin-left: 42px; background-color: #666;" >
+                        <div id="closeMenu">
+                            <span class="top" style="height: 15px; border-top-left-radius: 50%; border-top-right-radius: 50%;"></span>
+                            <span class="center"></span>
+                            <span class="bottom"></span>
+                        </div>                    
+                      </button>
                     </div>
                     <div class="offcanvas-body">
-                      <div class = "hamburgerMenu01" style = "display: block; margin-bottom: 20px;">
+                      <div class = "hamburgerMenu01" style = "display: block; margin-bottom: 20px; margin-top: 30px;">
                         <span>home</span><br>
                         <span>메뉴</span><br>
                         <span>프로모션</span><br>
                         <span>매장찾기</span><br>
                       </div>
                       <div class = "hamburgerMenu02" style = "display: block; margin-bottom: 40px;">
-                          <small>브랜드스토리</small><br>                          <small>고객문의</small>
+                          <small>브랜드스토리</small><br>
+                          <small>고객문의</small><br>
                           <small>가맹안내</small><br>
                           <small>(주)맘스터치앤컴퍼니</small><br>
                       </div>
-                      <div style = "display: block;" id="links">
+                      <div style = "display: block; margin-top: 180px;" id="links">
                         <a href="#"><img src="images/instagram.svg"></a>
                         <a href="#"><img src="images/facebook.svg"></a>
                         <a href="#"><img src="images/youtube.svg"></a>
@@ -287,14 +301,20 @@
         <section>
             <div class="swiper" id="momsBigMenu">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="images/1633480196-GHRUW.png">
+                    <div class="swiper-slide" style="background-image: url(images/1633480196-GHRUW.png); background-position: center;">
+                        <p style="font-size: 35px; font-weight: 300; color: #e3d1aa; margin-top: 200px; margin-left: 200px;">Barbecue Chicken Burger</p>
+                        <p style="font-size: 90px; font-weight: 900; color: #f9f5e0; margin-left: 200px;">두툼한 닭다리살과<br>잘 구운 통 베이컨 </p>
+                        <p style="font-size: 49px; color: #e3d1aa; margin-left: 300px; margin-top: 200px;">텍사스바베큐치킨버거</p>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="images/1616122384-JFZQU.jpg">
+                    <div class="swiper-slide" style="background-image: url(images/1616122384-JFZQU.jpg); background-position: center;">
+                        <p style="font-size: 35px; font-weight: 300; color: #e3d1aa; margin-top: 200px; margin-left: 200px;">Thigh Burger</p>
+                        <p style="font-size: 90px; font-weight: 900; color: #f9f5e0; margin-left: 200px;">올타임 레전드,<br>맘스터치<br>시그니처 버거</p>
+                        <p style="font-size: 49px; color: #e3d1aa; margin-left: 300px; margin-top: 100px;">싸이버거</p>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="images/1616409946-ASUDD.jpg">
+                    <div class="swiper-slide" style="background-image: url(images/1616409946-ASUDD.jpg); background-position: center;">
+                        <p style="font-size: 35px; font-weight: 300; color: #e3d1aa; margin-top: 200px; margin-left: 200px;">Mom's seasoned Fried Chicken</p>
+                        <p style="font-size: 90px; font-weight: 900; color: #f9f5e0; margin-left: 200px;">국내산 벌꿀의<br>특제소스<br>꿀맛나는 엄마표</p>
+                        <p style="font-size: 49px; color: #e3d1aa; margin-left: 300px; margin-top: 100px;">맘스양념치킨</p>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -396,30 +416,28 @@
             <div class="swiper" id = "momsNews">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style = "text-align: center;">
-                        <p style = "color: #c2b396; font-size: 24px;">2021-11-15</p>
+                        <p style = "color: #c2b396; font-size: 24px; margin-top: 45px;">2021-11-15</p>
                         <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">맘스터치 소자본 창업 희망 프로젝트</p>
                     </div>
                     <div class="swiper-slide" style = "text-align: center;">
-                        <p style = "color: #c2b396; font-size: 24px;">2021-03-16</p>
+                        <p style = "color: #c2b396; font-size: 24px; margin-top: 45px;">2021-03-16</p>
                         <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">제품 영양성분 정보(2021년 12월 30일 업데이트)</p>
                     </div>
                     <div class="swiper-slide" style = "text-align: center;">
-                        <p style = "color: #c2b396; font-size: 24px;">2021-03-16</p>
+                        <p style = "color: #c2b396; font-size: 24px; margin-top: 45px;">2021-03-16</p>
                         <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">알레르기 유발제품 표시(2021년 12월 30일 업데이트)</p>
                     </div>
                     <div class="swiper-slide" style = "text-align: center;">
-                        <p style = "color: #c2b396; font-size: 24px;">2021-03-16</p>
+                        <p style = "color: #c2b396; font-size: 24px; margin-top: 45px;">2021-03-16</p>
                         <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">원산지 표시판(2021년 12월 30일 업데이트)</p>
                     </div>
                     <div class="swiper-slide" style = "text-align: center;">
-                        <p style = "color: #c2b396; font-size: 24px;">2021-03-01</p>
+                        <p style = "color: #c2b396; font-size: 24px; margin-top: 45px;">2021-03-01</p>
                         <p style = "color: #5d4537; font-size: 44px; margin-top: 10px;">맘스터치 모바일 쿠폰 사용불가 매장 안내</p>
                     </div>                                                 
                 </div>
 
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>                  
+                <div class="swiper-pagination"></div>                 
             </div>
             <div id="momSns" style="background-image: url(images/bg_sns.jpg); background-position: center; padding-top: 80px;">
                 <ul id="snsImg">
@@ -534,6 +552,8 @@
             }
         });
 
+        $("#offcanvasExample").css("height", "720px").css("width", "500px").css("opacity", "0.8").css("backgroundColor", "#666666");
+
         const swiper02 = new Swiper('#momsNews', {
         // Optional parameters
         direction: 'horizontal',
@@ -572,7 +592,9 @@
         // Optional parameters
         direction: 'horizontal',
         loop: true,
-
+        autoplay: {
+            delay: 5000,
+            },
         pagination: {
             el: '.swiper-pagination',
         },
